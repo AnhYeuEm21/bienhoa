@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SẮC MÀU PHỐ THỊ — DÁNG HÌNH BIÊN HÒA HÔM NAY VÀ MAI SAU</title>
+  <meta name="description" content="Bài thuyết trình môn Giáo dục địa phương: Sắc màu phố thị - Dáng hình Biên Hòa hôm nay và mai sau. Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử trung tâm thành phố Biên Hòa, tỉnh Đồng Nai.">
+  <meta name="theme-color" content="#071B25">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23071B25'/%3E%3Cpath d='M6 28V15a10 10 0 0 1 20 0v13' fill='none' stroke='%232FC6AE' stroke-width='2.4'/%3E%3Cpath d='M12 28V17M16 28V11M20 28V17' stroke='%23D5AE68' stroke-width='2.4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ 1. THANH ĐIỀU HƯỚNG PHÍA TRÊN ============ -->
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 36V19a14 14 0 0 1 28 0v17" fill="none" stroke="#2FC6AE" stroke-width="2.6"/>
+        <path d="M14 36V22M20 36V13M26 36V22" stroke="#D5AE68" stroke-width="2.6" stroke-linecap="square"/>
+        <path d="M3 36h34" stroke="#F4F3ED" stroke-width="2"/>
+      </svg>
+      <div class="brand-text">
+        <strong>SẮC MÀU PHỐ THỊ — DÁNG HÌNH BIÊN HÒA</strong>
+        <span>Giáo dục địa phương · Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở &amp; di tích lịch sử</span>
+      </div>
+    </div>
+    <div class="top-actions">
+      <div class="counter counter-top" aria-hidden="true"><b data-cur>01</b><span>/ <i data-total>20</i></span></div>
+      <button class="btn" id="btnToc" type="button" aria-haspopup="dialog" data-tip="Mục lục (T)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span class="lbl">Mục lục</span>
+      </button>
+      <button class="btn" id="btnNotes" type="button" aria-pressed="false" data-tip="Lời dẫn thuyết trình (N)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v13H9l-4 4z"/><path d="M9 9h6M9 13h4"/></svg><span class="lbl">Lời dẫn</span>
+      </button>
+      <button class="btn icon" id="btnPresenter" type="button" data-tip="Cửa sổ người thuyết trình (P)" aria-label="Mở cửa sổ người thuyết trình">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>
+      </button>
+      <button class="btn icon" id="btnHelp" type="button" data-tip="Phím tắt (?)" aria-label="Hướng dẫn phím tắt">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 1 1 3.6 2.4c-.8.4-1.1.9-1.1 1.8M12 17v.01"/></svg>
+      </button>
+      <button class="btn icon primary-ghost" id="btnFs" type="button" data-tip="Toàn màn hình (F)" aria-label="Bật / tắt toàn màn hình">
+        <svg class="i-enter" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+        <svg class="i-exit" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ 2. KHU VỰC TRÌNH CHIẾU TRUNG TÂM ============ -->
+  <main class="stage-wrap" id="stageWrap">
+    <div class="stage" id="stage" aria-live="off"></div>
+
+    <!-- Bảng lời dẫn (thu gọn / mở) -->
+    <aside class="notes" id="notes" aria-label="Lời dẫn thuyết trình" aria-hidden="true">
+      <div class="notes-head">
+        <b>Lời dẫn thuyết trình</b>
+        <span class="notes-slide" id="notesSlide"></span>
+        <button class="btn icon sm" id="notesClose" type="button" aria-label="Thu gọn lời dẫn" data-tip="Thu gọn (N)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+      <div class="notes-body" id="notesBody"></div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- ============ 3. KHU VỰC ĐIỀU KHIỂN ============ -->
+  <footer class="controls" id="controls">
+    <button class="btn nav" id="btnPrev" type="button" data-tip="Slide trước (←)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span class="lbl">Trước</span>
+    </button>
+    <div class="counter" aria-label="Vị trí slide"><b data-cur>01</b><span>/ <i data-total>20</i></span></div>
+    <div class="progress" id="progress" role="progressbar" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1">
+      <div class="track"><div class="fill" id="progFill"></div></div>
+      <div class="ticks" id="ticks"></div>
+    </div>
+    <div class="hints" aria-hidden="true">
+      <kbd>←</kbd><kbd>→</kbd><kbd>Space</kbd><i></i><kbd>F</kbd><kbd>T</kbd><kbd>N</kbd>
+    </div>
+    <button class="btn nav primary" id="btnNext" type="button" data-tip="Slide tiếp theo (→ / Space)">
+      <span class="lbl">Tiếp theo</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </footer>
+
+  <!-- Mục lục -->
+  <div class="overlay" id="tocOverlay" hidden>
+    <div class="scrim" data-close></div>
+    <nav class="drawer" role="dialog" aria-modal="true" aria-label="Mục lục slide">
+      <div class="drawer-head">
+        <div><small>Mục lục</small><b>Chọn slide để chuyển ngay</b></div>
+        <button class="btn icon" type="button" data-close aria-label="Đóng mục lục"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div class="drawer-body" id="tocBody"></div>
+    </nav>
+  </div>
+
+  <!-- Hướng dẫn phím tắt -->
+  <div class="overlay center" id="helpOverlay" hidden>
+    <div class="scrim" data-close></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Phím tắt">
+      <div class="drawer-head">
+        <div><small>Hướng dẫn</small><b>Phím tắt &amp; thao tác</b></div>
+        <button class="btn icon" type="button" data-close aria-label="Đóng"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <dl class="keys">
+        <div><dt><kbd>→</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></dt><dd>Slide tiếp theo</dd></div>
+        <div><dt><kbd>←</kbd> <kbd>PgUp</kbd></dt><dd>Slide trước</dd></div>
+        <div><dt><kbd>Home</kbd> / <kbd>End</kbd></dt><dd>Về slide đầu / đến slide cuối</dd></div>
+        <div><dt><kbd>F</kbd></dt><dd>Bật / tắt toàn màn hình</dd></div>
+        <div><dt><kbd>T</kbd></dt><dd>Mở mục lục</dd></div>
+        <div><dt><kbd>N</kbd></dt><dd>Mở / thu gọn lời dẫn thuyết trình</dd></div>
+        <div><dt><kbd>P</kbd></dt><dd>Cửa sổ người thuyết trình (màn hình phụ)</dd></div>
+        <div><dt><kbd>M</kbd></dt><dd>Bật / tắt chế độ giảm chuyển động</dd></div>
+        <div><dt><kbd>?</kbd></dt><dd>Mở bảng này</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Đóng mục lục / hướng dẫn</dd></div>
+      </dl>
+      <p class="modal-note">Trên điện thoại: vuốt ngang để đổi slide. Các phím tắt không hoạt động khi bạn đang nhập vào ô nhập liệu.</p>
+    </div>
+  </div>
+
+  <noscript><p style="padding:4rem;color:#F4F3ED">Website trình chiếu cần bật JavaScript để hoạt động.</p></noscript>
+  <script src="script.js"></script>
+</body>
+</html>
