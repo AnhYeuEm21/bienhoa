@@ -445,9 +445,6 @@ html.rm .fill,html.rm .notes,html.rm .scrim,html.rm .drawer,html.rm .modal{trans
 
 /* ============================================================ ĐIỆN THOẠI */
 
-.mobile-switch-banner{display:none}
-html.m .mobile-switch-banner{display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#0B2732,#13394a);border-bottom:1px solid var(--teal);padding:1rem 1.4rem;color:var(--ivory);text-decoration:none;font-size:1.45rem;font-weight:600;text-align:center;position:relative;z-index:99}
-html.m .mobile-switch-banner b{color:var(--teal);text-decoration:underline;margin-left:.4rem}
 
 html.m body{font-size:1.9rem}
 html.m .topbar{height:5.4rem;padding:0 1.4rem}
