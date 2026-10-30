@@ -304,22 +304,19 @@ body.fs .stage-wrap{grid-row:1}
 
 /* ================================================ Slide: DÒNG THỜI GIAN */
 .tl-wrap{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
-.tl{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:repeat(13,minmax(0,1fr));padding:0 3.2rem}
-.ev:first-child .evc{left:0;transform:none}
-
-.ev:last-child .evc{left:auto;right:0;transform:none}
+.tl{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:repeat(13,minmax(0,1fr));padding:0 4.2rem}
 .tl-axis{position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;background:linear-gradient(90deg,var(--brass),var(--teal) 60%,var(--teal));transform-origin:left}
 .ev{position:relative;display:block;text-align:left;min-height:0}
 .ev .dot{position:absolute;left:50%;top:50%;width:1.8rem;height:1.8rem;margin:-.9rem 0 0 -.9rem;border-radius:50%;background:var(--ink);border:.4rem solid var(--gc);z-index:2;transition:transform var(--t-hover) var(--ease-out),background var(--t-hover)}
 .ev .stem{position:absolute;left:50%;width:2px;background:var(--gc);opacity:.7}
 .ev.up .stem{bottom:50%;height:2.2rem;margin-bottom:.9rem}
 .ev.down .stem{top:50%;height:2.2rem;margin-top:.9rem}
-.ev .evc{position:absolute;left:50%;width:17rem;transform:translateX(-50%);padding:.9rem 1.1rem;background:var(--card);border:1px solid var(--line);border-top:.3rem solid var(--gc);border-radius:.5rem;
+.ev .evc{position:absolute;left:50%;width:14.8rem;transform:translateX(-50%);padding:.8rem 1rem;background:var(--card);border:1px solid var(--line);border-top:.3rem solid var(--gc);border-radius:.5rem;
   transition:background var(--t-hover),transform var(--t-hover) var(--ease-out);box-shadow:0 .4rem 1.6rem rgba(0,0,0,.25)}
 .ev.up .evc{bottom:calc(50% + 3.4rem)} .ev.down .evc{top:calc(50% + 3.4rem)}
-.ev .evc b{display:block;font-size:2.1rem;font-weight:800;line-height:1.15;color:var(--gc)}
-.ev .evc b.sm{font-size:1.8rem}
-.ev .evc span{display:block;margin-top:.3rem;font-size:1.45rem;line-height:1.35;color:var(--fg)}
+.ev .evc b{display:block;font-size:1.95rem;font-weight:800;line-height:1.15;color:var(--gc)}
+.ev .evc b.sm{font-size:1.7rem}
+.ev .evc span{display:block;margin-top:.3rem;font-size:1.38rem;line-height:1.32;color:var(--fg)}
 .ev:hover .dot{background:var(--gc);transform:scale(1.35)}
 .ev:hover .evc{background:rgba(244,243,237,.12)}
 .tl-legend{display:flex;gap:3rem;flex-wrap:wrap;font-size:1.5rem;color:var(--soft);margin-top:1rem}
@@ -447,6 +444,11 @@ html.rm .fill,html.rm .notes,html.rm .scrim,html.rm .drawer,html.rm .modal{trans
 }
 
 /* ============================================================ ĐIỆN THOẠI */
+
+.mobile-switch-banner{display:none}
+html.m .mobile-switch-banner{display:flex;align-items:center;justify-content:center;background:linear-gradient(90deg,#0B2732,#13394a);border-bottom:1px solid var(--teal);padding:1rem 1.4rem;color:var(--ivory);text-decoration:none;font-size:1.45rem;font-weight:600;text-align:center;position:relative;z-index:99}
+html.m .mobile-switch-banner b{color:var(--teal);text-decoration:underline;margin-left:.4rem}
+
 html.m body{font-size:1.9rem}
 html.m .topbar{height:5.4rem;padding:0 1.4rem}
 html.m .brand-text{display:none}
