@@ -39,28 +39,34 @@ const MEMBERS = 'M.Na · B.Phương · K.Phụng · Yến · Đ.Thắng · H.Ch�
 const B = {
   pegasus: {
     n: 1, g: 'com', name: 'The Pegasus Plaza', short: 'The Pegasus Plaza', tag: 'Phức hợp thương mại – văn phòng – căn hộ',
-    addr: 'Số 53 - 55 đường Võ Thị Sáu, phường Quyết Thắng, thành phố Biên Hòa, tỉnh Đồng Nai.',
+    addr: 'Số 53 - 55 đường Võ Thị Sáu, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Quyết Thắng).',
     imgs: [{ k: 'pegasus', fp: '40% 50%', cap: 'Cổng trước The Pegasus Plaza (Hình 1.1)', tag: 'Cổng trước' }],
     dates: [{ d: '1/1/2011', t: 'Khởi công' }, { d: '11/12/2013', t: 'Chính thức khai trương' }],
     dev: 'Tòa nhà phát triển theo mô hình phức hợp gồm trung tâm thương mại, văn phòng và căn hộ cao cấp.',
     chips: ['Trung tâm thương mại', 'Văn phòng', 'Căn hộ cao cấp'],
     roles: ['Thúc đẩy hoạt động thương mại và dịch vụ', 'Tạo việc làm cho người dân', 'Cung cấp không gian mua sắm, ăn uống và giải trí'],
-    meaning: 'Góp phần hiện đại hóa đô thị Biên Hòa, nâng cao chất lượng cuộc sống và thúc đẩy sự phát triển kinh tế địa phương.'
+    meaning: 'Góp phần hiện đại hóa diện mạo đô thị, nâng cao chất lượng cuộc sống và thúc đẩy sự phát triển kinh tế của thành phố Đồng Nai.'
   },
   vincom: {
     n: 2, g: 'com', name: 'Vincom Plaza Biên Hòa', short: 'Vincom Plaza Biên Hòa', tag: 'Mua sắm, giải trí',
-    addr: 'Số 1096 đường Phạm Văn Thuận, phường Tam Hiệp, tỉnh Đồng Nai.',
+    addr: 'Số 1096 đường Phạm Văn Thuận, phường Tam Hiệp, thành phố Đồng Nai.',
     imgs: [{ k: 'vincom-out', fp: '50% 55%', cap: 'Bên ngoài trung tâm thương mại Vincom (Hình 2.1)', tag: 'Bên ngoài' },
            { k: 'vincom-in',  fp: '50% 50%', cap: 'Bên trong trung tâm Vincom (Hình 2.2)', tag: 'Bên trong' }],
     dates: [{ d: '28/8/2015', t: 'Chính thức khai trương' }],
     hist: 'Thuộc Tập đoàn Vingroup, phục vụ nhu cầu mua sắm và giải trí của người dân.',
     dev: 'Ngày càng phát triển với nhiều cửa hàng, nhà hàng, siêu thị, rạp chiếu phim và khu vui chơi.',
     roles: ['Thúc đẩy kinh tế và thương mại', 'Tạo việc làm cho người dân', 'Phát triển dịch vụ mua sắm, vui chơi và giải trí'],
-    meaning: 'Góp phần hiện đại hóa đô thị Biên Hòa, nâng cao chất lượng cuộc sống và thể hiện sự phát triển của tỉnh Đồng Nai.'
+    meaning: 'Góp phần hiện đại hóa diện mạo đô thị, nâng cao chất lượng cuộc sống và thể hiện sự phát triển của thành phố Đồng Nai.'
   },
   go: {
     n: 3, g: 'com', name: 'GO! Đồng Nai', short: 'GO! Đồng Nai', tag: 'Mua sắm, ăn uống, dịch vụ',
-    addr: 'Khu vực Xa lộ Hà Nội, Long Hưng, Biên Hòa, Đồng Nai.',
+    addr: 'Khu vực Xa lộ Hà Nội, xã Long Hưng, thành phố Đồng Nai.',
+    video: {
+      src: 'assets/video/202611120623.mp4',
+      poster: 'assets/video/thumb_go.jpg',
+      title: 'Trung tâm thương mại GO! Đồng Nai',
+      tag: 'Video thực tế'
+    },
     imgs: [{ k: 'go', fp: '62% 50%', cap: 'GO! Đồng Nai (Hình 11.1)', tag: 'Phối cảnh' }],
     hist: 'Được phát triển từ mô hình trung tâm mua sắm quy mô lớn tại khu vực Biên Hòa.',
     dev: 'Được cải tiến và phát triển thành tổ hợp mua sắm, ăn uống và dịch vụ.',
@@ -71,7 +77,7 @@ const B = {
   },
   mira: {
     n: 4, g: 'com', name: 'The Mira Central Park', short: 'The Mira Central Park', tag: 'Khách sạn, hội nghị, sự kiện',
-    addr: '128/16 đường Nguyễn Ái Quốc, khu vực Tam Hiệp, Biên Hòa, Đồng Nai.',
+    addr: 'Số 128/16 đường Nguyễn Ái Quốc, phường Tân Mai, thành phố Đồng Nai (khu vực Tam Hiệp cũ).',
     imgs: [{ k: 'mira', fp: '36% 40%', cap: 'The Mira Central Park (Hình 7.1)', tag: 'Toàn cảnh' }],
     hist: 'Được xây dựng nhằm đáp ứng nhu cầu lưu trú, nghỉ dưỡng và tổ chức sự kiện tại Biên Hòa.',
     dev: 'Phát triển thành khách sạn hiện đại, phục vụ khách du lịch, doanh nhân và các sự kiện lớn.',
@@ -82,7 +88,13 @@ const B = {
   },
   aqua: {
     n: 5, g: 'home', name: 'Khu đô thị sinh thái Aqua City', short: 'Aqua City', tag: 'Khu đô thị sinh thái',
-    addr: 'Đường Hương Lộ 2, xã Long Hưng, thành phố Biên Hòa, tỉnh Đồng Nai (liền kề TP.HCM).',
+    addr: 'Đường Hương Lộ 2, xã Long Hưng, thành phố Đồng Nai (liền kề TP.HCM).',
+    video: {
+      src: 'assets/video/202611120629.mp4',
+      poster: 'assets/video/thumb_aqua.jpg',
+      title: 'Đô thị sinh thái Aqua City Novaland',
+      tag: 'Video toàn cảnh'
+    },
     imgs: [{ k: 'aqua-map',  fp: '50% 50%', cap: 'Dự án Aqua City Novaland Đồng Nai (Hình 4.1)', tag: 'Sơ đồ dự án' },
            { k: 'aqua-real', fp: '45% 50%', cap: 'Hình ảnh thực tế dự án Aqua City Novaland (Hình 4.2)', tag: 'Hình ảnh thực tế' }],
     dates: [{ d: '2019', t: 'Khởi công' },
@@ -98,6 +110,7 @@ const B = {
   },
   thanhbinh: {
     n: 6, g: 'home', name: 'Thanh Bình Plaza', short: 'Thanh Bình Plaza', tag: 'Nhà ở kết hợp thương mại',
+    addr: 'Đường Cách Mạng Tháng Tám, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Thanh Bình).',
     imgs: [{ k: 'thanhbinh-out', fp: '50% 40%', cap: 'Bên ngoài chung cư Thanh Bình (Hình 5.1)', tag: 'Bên ngoài' },
            { k: 'thanhbinh-in',  fp: '50% 60%', cap: 'Bên trong phòng của chung cư Thanh Bình (Hình 5.2)', tag: 'Bên trong' }],
     dates: [{ d: 'Tháng 10/2015', t: 'Khởi công' }, { d: 'Cuối năm 2017', t: 'Bàn giao' }],
@@ -111,7 +124,7 @@ const B = {
   },
   topaz: {
     n: 7, g: 'home', name: 'Topaz Twins Biên Hòa', short: 'Topaz Twins Biên Hòa', tag: 'Hai khối tháp căn hộ',
-    addr: 'Khu vực đường số 1, gần đường Võ Thị Sáu, trung tâm Biên Hòa.',
+    addr: 'Khu D2D (đường số 1, gần đường Võ Thị Sáu), phường Thống Nhất, thành phố Đồng Nai.',
     imgs: [{ k: 'topaz', fp: '50% 45%', cap: 'Topaz Twins Biên Hòa (Hình 9.1)', tag: 'Hai khối tháp' }],
     hist: 'Là dự án căn hộ cao tầng được phát triển nhằm đáp ứng nhu cầu nhà ở tại đô thị.',
     dev: 'Hình thành tổ hợp hai khối tháp căn hộ với các tiện ích phục vụ cư dân.',
@@ -122,7 +135,7 @@ const B = {
   },
   bcons: {
     n: 8, g: 'home', name: 'Bcons Central Park', short: 'Bcons Central Park', tag: 'Căn hộ cao tầng',
-    addr: 'Khu vực hẻm 238 đường Phan Trung, Tam Hiệp, Biên Hòa, Đồng Nai.',
+    addr: 'Hẻm 238 đường Phan Trung, phường Tân Mai, thành phố Đồng Nai (khu vực Tân Tiến cũ).',
     imgs: [{ k: 'bcons', fp: '38% 45%', cap: 'Bcons Central Park (Hình 12.1)', tag: 'Phối cảnh' }],
     hist: 'Là dự án phát triển nhà ở theo mô hình căn hộ cao tầng.',
     dev: 'Được định hướng thành khu căn hộ với các tiện ích phục vụ đời sống cư dân.',
@@ -133,18 +146,18 @@ const B = {
   },
   sonadezi: {
     n: 9, g: 'off', name: 'Sonadezi Building', short: 'Sonadezi Building', tag: 'Văn phòng và dịch vụ',
-    addr: 'Đường số 1, Khu công nghiệp Biên Hòa 1, Đồng Nai.',
+    addr: 'Đường số 1, Khu công nghiệp Biên Hòa 1, phường An Bình, thành phố Đồng Nai.',
     imgs: [{ k: 'sonadezi', fp: '34% 50%', cap: 'Sonadezi Building (Hình 8.1)', tag: 'Bên ngoài' }],
     hist: 'Được xây dựng phục vụ hoạt động quản lý, điều hành và kinh doanh của doanh nghiệp.',
     dev: 'Trở thành địa điểm văn phòng và dịch vụ phục vụ các hoạt động kinh tế trong khu vực.',
     roles: ['Hỗ trợ hoạt động doanh nghiệp, góp phần thúc đẩy phát triển kinh tế và dịch vụ'],
-    meaning: 'Thể hiện quá trình công nghiệp hóa và hiện đại hóa của Đồng Nai.',
+    meaning: 'Thể hiện quá trình công nghiệp hóa và hiện đại hóa mạnh mẽ của thành phố Đồng Nai.',
     inside: 'Không gian văn phòng, khu vực làm việc và phòng họp.',
     outside: 'Khối nhà văn phòng nhiều tầng, mặt đứng hiện đại và hệ thống cửa kính.'
   },
   bv: {
     n: 10, g: 'off', name: 'BV Building', short: 'BV Building', tag: 'Văn phòng, kinh doanh',
-    addr: '197 đường Hà Huy Giáp, Biên Hòa, Đồng Nai.',
+    addr: 'Số 197 đường Hà Huy Giáp, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Quyết Thắng).',
     imgs: [{ k: 'bv', fp: '70% 45%', cap: 'BV Building (Hình 10.1)', tag: 'Mặt tiền' }],
     hist: 'Được xây dựng để phục vụ nhu cầu văn phòng và hoạt động kinh doanh.',
     dev: 'Trở thành địa điểm làm việc của các doanh nghiệp và đơn vị dịch vụ.',
@@ -154,21 +167,23 @@ const B = {
     outside: 'Mặt tiền hiện đại, các tầng chức năng và hệ thống cửa kính.'
   },
   ubnd: {
-    n: 11, g: 'off', name: 'Trụ sở UBND tỉnh Đồng Nai', short: 'Trụ sở UBND tỉnh Đồng Nai', tag: 'Cơ quan hành chính cấp tỉnh',
-    addr: 'Số 02, đường Nguyễn Văn Trị, Phường Thanh Bình, Thành phố Biên Hòa, tỉnh Đồng Nai.',
-    imgs: [{ k: 'ubnd', fp: '50% 35%', cap: 'Mặt trước văn phòng UBND tỉnh Đồng Nai (Hình 6.1)', tag: 'Mặt trước' }],
+    n: 11, g: 'off', name: 'Trụ sở UBND thành phố Đồng Nai', short: 'Trụ sở UBND TP. Đồng Nai', tag: 'Cơ quan hành chính cấp thành phố trực thuộc Trung ương',
+    addr: 'Số 02, đường Nguyễn Văn Trị, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Thanh Bình).',
+    imgs: [{ k: 'ubnd', fp: '50% 35%', cap: 'Mặt trước văn phòng UBND thành phố Đồng Nai (Hình 6.1)', tag: 'Mặt trước' }],
     dates: [{ d: 'Thời Pháp', t: 'Tiền thân là Tòa hành chính tỉnh Biên Hòa', long: true },
-            { d: 'Tháng 2/1976', t: 'Ủy ban Nhân dân tỉnh chính thức thành lập sau khi hợp nhất các tỉnh Biên Hòa, Bà Rịa và Long Khánh' }],
-    dev: 'Từ bộ máy quản lý thời chiến, cơ quan đã cải tổ qua nhiều thời kỳ Hiến pháp, liên tục nâng cấp trụ sở và số hóa để quản lý một tỉnh công nghiệp trọng điểm.',
-    meaning: 'Là trung tâm đưa ra các quyết sách phát triển kinh tế - xã hội cao nhất của tỉnh, đồng thời là biểu tượng quyền lực nhà nước mang tính phục vụ nhân dân.',
+            { d: 'Tháng 2/1976', t: 'UBND tỉnh Đồng Nai thành lập sau khi hợp nhất các tỉnh Biên Hòa, Bà Rịa và Long Khánh' },
+            { d: '30/4/2026', t: 'Thành lập Thành phố Đồng Nai trực thuộc Trung ương theo Nghị quyết 30/2026/QH16', long: true }],
+    dev: 'Từ bộ máy quản lý thời chiến và Tòa hành chính thời Pháp, cơ quan đã cải tổ qua nhiều thời kỳ Hiến pháp, nâng cấp thành cơ quan hành chính thành phố trực thuộc Trung ương hiện đại và số hóa toàn diện.',
+    meaning: 'Là trung tâm đưa ra các quyết sách phát triển kinh tế - xã hội cao nhất của thành phố Đồng Nai, đồng thời là biểu tượng quyền lực nhà nước mang tính phục vụ nhân dân.',
     roleLine: 'Cơ quan hành chính nhà nước cao nhất ở địa phương, thực hiện hai chức năng chính:',
     fns: [
-      { h: 'Quản lý và điều hành', p: 'Thực thi Hiến pháp, pháp luật và quản lý toàn diện các lĩnh vực kinh tế, văn hóa, an ninh, quốc phòng trên địa bàn toàn tỉnh.' },
-      { h: 'Tổ chức thực hiện', p: 'Cụ thể hóa các nghị quyết của Tỉnh ủy, Hội đồng Nhân dân tỉnh và chỉ đạo của Chính phủ thành các kế hoạch, chính sách phát triển thực tế.' }
+      { h: 'Quản lý và điều hành', p: 'Thực thi Hiến pháp, pháp luật và quản lý toàn diện các lĩnh vực kinh tế, văn hóa, an ninh, quốc phòng trên địa bàn toàn thành phố.' },
+      { h: 'Tổ chức thực hiện', p: 'Cụ thể hóa các nghị quyết của Thành ủy, Hội đồng Nhân dân thành phố và chỉ đạo của Chính phủ thành các kế hoạch, chính sách phát triển thực tế.' }
     ]
   },
   tanlan: {
     n: 12, g: 'her', name: 'Đình Tân Lân', short: 'Đình Tân Lân', tag: 'Di tích cấp quốc gia (1991)',
+    addr: 'Đường Nguyễn Văn Trị, phường Quang Vinh, thành phố Đồng Nai (trước sáp nhập thuộc phường Hòa Bình).',
     imgs: [{ k: 'tan-lan', fp: '50% 30%', cap: 'Cổng trước Đình Tân Lân (Hình 13.1)', tag: '' }],
     dates: [{ d: 'Thời vua Minh Mạng', t: 'Đình có từ thời kỳ này, thờ Trần Thượng Xuyên', long: true },
             { d: '1991', t: 'Được công nhận là di tích cấp quốc gia' }],
@@ -180,6 +195,7 @@ const B = {
   },
   chuaong: {
     n: 13, g: 'her', name: 'Chùa Ông (Thất Phủ Cổ Miếu)', short: 'Chùa Ông (Thất Phủ Cổ Miếu)', tag: 'Di tích cấp quốc gia (2001)',
+    addr: 'Cù Lao Phố, phường Hiệp Hòa, thành phố Đồng Nai.',
     imgs: [{ k: 'chua-ong', fp: '50% 48%', cap: 'Cổng chùa Ông Thất Phủ Cổ Miếu (Hình 14.1)', tag: '' }],
     dates: [{ d: '1684', t: 'Xây dựng bởi cộng đồng người Hoa ở Cù Lao Phố' },
             { d: '2001', t: 'Được công nhận là di tích cấp quốc gia' }],
@@ -195,7 +211,7 @@ const TOTAL_BUILDINGS = Object.keys(B).length;
 const TIMELINE = [
   { d: '1684',               t: 'Xây dựng Chùa Ông (Thất Phủ Cổ Miếu) tại Cù Lao Phố', id: 'chuaong', g: 'her' },
   { d: 'Thời Minh Mạng',     t: 'Đình Tân Lân có từ thời vua Minh Mạng', id: 'tanlan', g: 'her', sm: 1 },
-  { d: 'Thời Pháp',          t: 'Tòa hành chính tỉnh Biên Hòa, tiền thân của trụ sở UBND tỉnh', id: 'ubnd', g: 'off', sm: 1 },
+  { d: 'Thời Pháp',          t: 'Tòa hành chính tỉnh Biên Hòa, tiền thân trụ sở UBND thành phố Đồng Nai', id: 'ubnd', g: 'off', sm: 1 },
   { d: '2/1976',             t: 'UBND tỉnh Đồng Nai thành lập sau khi hợp nhất Biên Hòa, Bà Rịa, Long Khánh', id: 'ubnd', g: 'off' },
   { d: '1991',               t: 'Đình Tân Lân là di tích cấp quốc gia', id: 'tanlan', g: 'her' },
   { d: '2001',               t: 'Chùa Ông là di tích cấp quốc gia', id: 'chuaong', g: 'her' },
@@ -205,6 +221,7 @@ const TIMELINE = [
   { d: 'Tháng 10/2015',      t: 'Khởi công Thanh Bình Plaza', id: 'thanhbinh', g: 'home', sm: 1 },
   { d: 'Cuối năm 2017',      t: 'Bàn giao Thanh Bình Plaza', id: 'thanhbinh', g: 'home', sm: 1 },
   { d: '2019',               t: 'Khởi công Aqua City', id: 'aqua', g: 'home' },
+  { d: '30/4/2026',          t: 'Thành lập Thành phố Đồng Nai trực thuộc Trung ương (NQ 30/2026/QH16)', id: 'ubnd2', g: 'off', sm: 1 },
   { d: 'Cuối năm 2026',      t: 'Aqua City bứt tốc thi công, hướng tới bàn giao đồng loạt', id: 'aqua2', g: 'home', sm: 1 }
 ];
 
@@ -228,6 +245,13 @@ function photo(img, o = {}) {
 const eyebrow = (b, a) => `<div class="eyebrow" ${a}><span class="idx">${pad(b.n)}</span><span>${GROUPS[b.g].name}</span><i></i><span>${b.n}/${TOTAL_BUILDINGS}</span></div>`;
 const titleH = (b, a, cls = '') => `<h2 class="title ${cls}" ${a}>${b.name}</h2>`;
 const addrH = (b, a) => b.addr ? `<p class="addr" ${a}>${PIN}<span>${b.addr}</span></p>` : '';
+const videoThumbH = (v, delay = 260) => v ? `<button class="vid-thumb" type="button" aria-label="Xem ${v.title}" data-video-src="${v.src}" data-video-title="${v.title}" data-video-tag="${v.tag || 'Video tư liệu'}" ${A('pop', delay)}>
+  <img src="${v.poster}" alt="${v.title}" loading="lazy">
+  <div class="vid-thumb-overlay">
+    <span class="vid-badge"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg> ${v.tag || 'Video'}</span>
+    <span class="vid-play-btn"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
+  </div>
+</button>` : '';
 const datesH = (b, base) => b.dates ? `<div class="dates"><i class="dline" ${A('line', base)}></i>${b.dates.map((x, i) =>
   `<div class="date ${x.long ? 'long' : ''}" ${A('rise-sm', base + 250 + i * 220)}><b>${x.d}</b><span>${x.t}</span></div>`).join('')}</div>` : '';
 const card = (k, p, a) => `<div class="card" ${a}><h4>${k}</h4><p>${p}</p></div>`;
@@ -292,6 +316,7 @@ function full(b, o = {}) {
   const steps = o.steps || stepsOf(b);
   return { cls: 'l-full', html: `
   ${photo(b.imgs[0], { cls: 'bgphoto kb-slow', a: A('fade', 0), cap: false, tag: false })}
+  ${b.video ? videoThumbH(b.video, 260) : ''}
   <div class="full-grid">
     <div class="full-main">
       <div class="head">${eyebrow(b, A('fade', 120))}${titleH(b, A('rise', 200))}${addrH(b, A('rise-sm', 320))}</div>
@@ -337,7 +362,7 @@ const DEFS = [
        { k: 'chua-ong', fp: '50% 50%', cap: 'Chùa Ông', h: 58, d: 560 },
        { k: 'mira',     fp: '34% 40%', cap: 'The Mira', h: 80, d: 460 },
        { k: 'pegasus',  fp: '41% 50%', cap: 'Pegasus',  h: 100, d: 360 },
-       { k: 'ubnd',     fp: '50% 30%', cap: 'UBND tỉnh', h: 72, d: 460 },
+       { k: 'ubnd',     fp: '50% 30%', cap: 'UBND TP',   h: 72, d: 460 },
        { k: 'tan-lan',  fp: '50% 55%', cap: 'Tân Lân',  h: 64, d: 560 }
      ];
      return { cls: 's-cover', html: `
@@ -350,14 +375,14 @@ const DEFS = [
        <p class="sub" ${A('rise-sm', 640)}>Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử trung tâm.</p>
        <div class="cover-meta" ${A('rise-sm', 780)}>
          <div><small>Môn học</small><span>Giáo dục địa phương</span></div>
-         <div><small>Chủ đề</small><span>Kiến trúc các phường ở trung tâm<br>TP. Biên Hòa, tỉnh Đồng Nai</span></div>
+         <div><small>Chủ đề</small><span>Kiến trúc các phường ở trung tâm<br>đô thị Biên Hòa, TP. Đồng Nai</span></div>
          <div><small>Thành viên</small><span>${MEMBERS}</span></div>
        </div>
        <button class="cta" type="button" data-go="1" ${A('rise-sm', 920)}>BẮT ĐẦU KHÁM PHÁ ${ARROW}</button>
      </div>
-     <div class="cover-loc" ${A('fade', 1100)}>Biên Hòa · Đồng Nai</div>` };
+     <div class="cover-loc" ${A('fade', 1100)}>ĐÔ THỊ BIÊN HÒA · THÀNH PHỐ ĐỒNG NAI</div>` };
    },
-   notes: { open: 'Xin chào thầy cô và các bạn. Hôm nay nhóm xin giới thiệu chuyên đề “Sắc màu phố thị: Dáng hình Biên Hòa hôm nay và mai sau”, tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại trung tâm thành phố Biên Hòa, tỉnh Đồng Nai.',
+   notes: { open: 'Xin chào thầy cô và các bạn. Hôm nay nhóm xin giới thiệu chuyên đề “Sắc màu phố thị: Dáng hình Biên Hòa hôm nay và mai sau”, tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại các phường trung tâm đô thị Biên Hòa thuộc thành phố Đồng Nai.',
      points: ['Môn học: Giáo dục địa phương.', 'Thành viên thực hiện: M.Na, B.Phương, K.Phụng, Yến, Đ.Thắng, H.Châu, Đ.Phong, Q.Nguyên.', 'Mỗi công trình là một câu chuyện về diện mạo đô thị và giá trị văn hóa địa phương.'],
      next: 'Trước tiên, mời cả lớp nhìn qua tổng quan hành trình hôm nay.' } },
 
@@ -368,7 +393,7 @@ const DEFS = [
        const desc = {
          com : 'Thúc đẩy thương mại, dịch vụ; tạo việc làm; không gian mua sắm, giải trí, lưu trú.',
          home: 'Căn hộ cao tầng và khu đô thị đáp ứng nhu cầu nhà ở, thay đổi cảnh quan đô thị.',
-         off : 'Không gian làm việc của doanh nghiệp và cơ quan hành chính cấp tỉnh.',
+         off : 'Không gian làm việc của doanh nghiệp và cơ quan hành chính cấp thành phố trực thuộc Trung ương.',
          her : 'Đình, chùa là di tích cấp quốc gia, lưu giữ lịch sử và văn hóa địa phương.'
        }[g];
        return `<section class="ov-col" style="--gc:${G.color}" ${A('rise', 260 + ci * 130)}>
@@ -385,34 +410,35 @@ const DEFS = [
        <div class="ov-grid">${cols}</div>` };
    },
    notes: { open: 'Bài thuyết trình đi qua 13 công trình trong tài liệu, chia thành bốn nhóm theo chức năng.',
-     points: ['Nhóm 1 — Thương mại, dịch vụ: The Pegasus Plaza, Vincom Plaza Biên Hòa, GO! Đồng Nai, The Mira Central Park.', 'Nhóm 2 — Nhà ở, đô thị: Aqua City, Thanh Bình Plaza, Topaz Twins Biên Hòa, Bcons Central Park.', 'Nhóm 3 — Văn phòng, hành chính: Sonadezi Building, BV Building, trụ sở UBND tỉnh Đồng Nai.', 'Nhóm 4 — Di sản: Đình Tân Lân và Chùa Ông (Thất Phủ Cổ Miếu).'],
+     points: ['Nhóm 1 — Thương mại, dịch vụ: The Pegasus Plaza, Vincom Plaza Biên Hòa, GO! Đồng Nai, The Mira Central Park.', 'Nhóm 2 — Nhà ở, đô thị: Aqua City, Thanh Bình Plaza, Topaz Twins Biên Hòa, Bcons Central Park.', 'Nhóm 3 — Văn phòng, hành chính: Sonadezi Building, BV Building, trụ sở UBND thành phố Đồng Nai.', 'Nhóm 4 — Di sản: Đình Tân Lân và Chùa Ông (Thất Phủ Cổ Miếu).'],
      next: 'Chúng ta bắt đầu với nhóm thương mại – dịch vụ, mở đầu là The Pegasus Plaza.' } },
 
  { id: 'pegasus', title: 'The Pegasus Plaza', sec: 'com', tr: 'mask', thumb: 'pegasus', build: () => split(B.pegasus),
-   notes: { open: 'Công trình đầu tiên là The Pegasus Plaza, ở số 53 - 55 đường Võ Thị Sáu, phường Quyết Thắng.',
+   notes: { open: 'Công trình đầu tiên là The Pegasus Plaza, ở số 53 - 55 đường Võ Thị Sáu, phường Trung Dũng, thành phố Đồng Nai (trước đây thuộc phường Quyết Thắng).',
      points: ['Khởi công ngày 1/1/2011 và chính thức khai trương ngày 11/12/2013.', 'Phát triển theo mô hình phức hợp: trung tâm thương mại, văn phòng và căn hộ cao cấp.', 'Vai trò: thúc đẩy thương mại, dịch vụ; tạo việc làm; cung cấp không gian mua sắm, ăn uống, giải trí.', 'Ý nghĩa: góp phần hiện đại hóa đô thị Biên Hòa.'],
      next: 'Cũng là một trung tâm thương mại, Vincom Plaza Biên Hòa có câu chuyện riêng.' } },
  { id: 'vincom', title: 'Vincom Plaza Biên Hòa', sec: 'com', tr: 'slide', thumb: 'vincom-out', build: () => dual(B.vincom),
-   notes: { open: 'Vincom Plaza Biên Hòa nằm ở số 1096 đường Phạm Văn Thuận, phường Tam Hiệp, thuộc Tập đoàn Vingroup.',
+   notes: { open: 'Vincom Plaza Biên Hòa nằm ở số 1096 đường Phạm Văn Thuận, phường Tam Hiệp, thành phố Đồng Nai, thuộc Tập đoàn Vingroup.',
      points: ['Chính thức khai trương ngày 28/8/2015, phục vụ nhu cầu mua sắm và giải trí.', 'Ngày càng phát triển với cửa hàng, nhà hàng, siêu thị, rạp chiếu phim và khu vui chơi.', 'Vai trò: thúc đẩy kinh tế, thương mại; tạo việc làm; phát triển dịch vụ mua sắm, vui chơi, giải trí.'],
      next: 'Tiếp theo là một mô hình bán lẻ quy mô lớn khác: GO! Đồng Nai.' } },
  { id: 'go', title: 'GO! Đồng Nai', sec: 'com', tr: 'slide', thumb: 'go', build: () => full(B.go, { dates: false }),
-   notes: { open: 'GO! Đồng Nai nằm ở khu vực Xa lộ Hà Nội, Long Hưng, Biên Hòa.',
+   notes: { open: 'GO! Đồng Nai nằm ở khu vực Xa lộ Hà Nội, xã Long Hưng, thành phố Đồng Nai.',
      points: ['Phát triển từ mô hình trung tâm mua sắm quy mô lớn.', 'Được cải tiến thành tổ hợp mua sắm, ăn uống và dịch vụ.', 'Bên ngoài: công trình quy mô lớn, mặt tiền hiện đại, có khu vực bãi đỗ xe. Bên trong: khu siêu thị, gian hàng, khu ẩm thực, không gian dịch vụ.', 'Ý nghĩa: thể hiện sự phát triển của mô hình bán lẻ hiện đại và lối sống đô thị.'],
      next: 'Cuối nhóm này là một công trình dịch vụ lưu trú: The Mira Central Park.' } },
  { id: 'mira', title: 'The Mira Central Park', sec: 'com', tr: 'slide', thumb: 'mira', build: () => split(B.mira, { flip: true }),
-   notes: { open: 'The Mira Central Park ở 128/16 đường Nguyễn Ái Quốc, khu vực Tam Hiệp.',
+   notes: { open: 'The Mira Central Park Hotel ở số 128/16 đường Nguyễn Ái Quốc, phường Tân Mai, thành phố Đồng Nai (khu vực Tam Hiệp cũ).',
      points: ['Được xây dựng để đáp ứng nhu cầu lưu trú, nghỉ dưỡng và tổ chức sự kiện.', 'Phát triển thành khách sạn hiện đại, phục vụ khách du lịch, doanh nhân và các sự kiện lớn.', 'Bên ngoài: khối nhà cao tầng, mặt đứng hiện đại, cửa kính. Bên trong: sảnh, phòng nghỉ, nhà hàng, phòng hội nghị.'],
      next: 'Chuyển sang nhóm nhà ở và đô thị, bắt đầu với khu đô thị sinh thái Aqua City.' } },
 
  { id: 'aqua', title: 'Aqua City — hình thành & phát triển', sec: 'home', tr: 'mask', thumb: 'aqua-real', build: () => dual(B.aqua),
-   notes: { open: 'Aqua City là khu đô thị sinh thái ở đường Hương Lộ 2, xã Long Hưng, liền kề TP.HCM.',
+   notes: { open: 'Aqua City là khu đô thị sinh thái thông minh tại đường Hương Lộ 2, xã Long Hưng, thành phố Đồng Nai, liền kề TP.HCM.',
      points: ['Khởi công từ năm 2019, chia thành nhiều phân khu như Đảo Phượng Hoàng, Sun Harbor.', 'Sau giai đoạn tháo gỡ vướng mắc pháp lý, đến cuối năm 2026 dự án đang bứt tốc thi công với dòng vốn lớn từ ngân hàng.', 'Mục tiêu: hoàn thiện hạ tầng và bàn giao đồng loạt cho cư dân.'],
      next: 'Vậy Aqua City có vai trò và ý nghĩa gì? Mời cả lớp xem slide tiếp theo.' } },
  { id: 'aqua2', title: 'Aqua City — vai trò & ý nghĩa', sec: 'home', tr: 'fade', thumb: 'aqua-real', build: () => {
      const b = B.aqua;
      return { cls: 'l-full', html: `
      ${photo(b.imgs[1], { cls: 'bgphoto kb-slow', a: A('fade', 0), cap: false, tag: false })}
+     ${b.video ? videoThumbH(b.video, 260) : ''}
      <div class="full-grid">
        <div class="full-main">
          <div class="head"><div class="eyebrow" ${A('fade', 120)}><span class="idx">${pad(b.n)}</span><span>${GROUPS.home.name}</span><i></i><span>Vai trò & ý nghĩa</span></div>
@@ -430,37 +456,37 @@ const DEFS = [
      points: ['Là tổ hợp giải trí - dịch vụ cao cấp nhờ bến du thuyền, trung tâm thương mại, trường học và bệnh viện quốc tế.', 'Ý nghĩa: tiên phong xu hướng sống xanh chuẩn quốc tế, 70% diện tích là mảng xanh, mặt nước.', 'Góp phần giãn dân, giảm áp lực đô thị cho trung tâm TP.HCM.'],
      next: 'Quay về trung tâm Biên Hòa với chung cư Thanh Bình Plaza.' } },
  { id: 'thanhbinh', title: 'Thanh Bình Plaza', sec: 'home', tr: 'slide', thumb: 'thanhbinh-out', build: () => dual(B.thanhbinh, { badge: true }),
-   notes: { open: 'Thanh Bình Plaza do Tổng công ty HUD, thuộc Bộ Xây dựng, đầu tư.',
+   notes: { open: 'Thanh Bình Plaza nằm trên đường Cách Mạng Tháng Tám, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Thanh Bình), do Tổng công ty HUD đầu tư.',
      points: ['Khởi công tháng 10/2015 và bàn giao từ cuối năm 2017.', 'Dự án gồm 11 tầng nổi, 1 tầng hầm; không gian ở kết hợp dịch vụ thương mại.', 'Vai trò: điểm kết nối giao thông - hành chính, gần chợ Biên Hòa, bờ sông và các cơ quan hành chính.', 'Ý nghĩa: hiện đại hóa bộ mặt đô thị lõi, giải quyết nhu cầu nhà ở chất lượng cao.'],
      next: 'Tiếp theo là một dự án căn hộ gồm hai khối tháp: Topaz Twins Biên Hòa.' } },
  { id: 'topaz', title: 'Topaz Twins Biên Hòa', sec: 'home', tr: 'slide', thumb: 'topaz', build: () => split(B.topaz),
-   notes: { open: 'Topaz Twins Biên Hòa ở khu vực đường số 1, gần đường Võ Thị Sáu.',
+   notes: { open: 'Topaz Twins Biên Hòa ở khu D2D (đường số 1, gần đường Võ Thị Sáu), phường Thống Nhất, thành phố Đồng Nai.',
      points: ['Là dự án căn hộ cao tầng nhằm đáp ứng nhu cầu nhà ở tại đô thị.', 'Hình thành tổ hợp hai khối tháp căn hộ cùng tiện ích cho cư dân.', 'Bổ sung nguồn cung nhà ở và góp phần thay đổi cảnh quan đô thị.'],
      next: 'Một dự án căn hộ cao tầng khác là Bcons Central Park.' } },
  { id: 'bcons', title: 'Bcons Central Park', sec: 'home', tr: 'slide', thumb: 'bcons', build: () => full(B.bcons, { dates: false }),
-   notes: { open: 'Bcons Central Park nằm ở khu vực hẻm 238 đường Phan Trung, Tam Hiệp.',
+   notes: { open: 'Bcons Central Park nằm ở hẻm 238 đường Phan Trung, phường Tân Mai, thành phố Đồng Nai (khu vực Tân Tiến cũ).',
      points: ['Là dự án phát triển nhà ở theo mô hình căn hộ cao tầng.', 'Được định hướng thành khu căn hộ có tiện ích phục vụ đời sống cư dân.', 'Ý nghĩa: xu hướng xây dựng khu dân cư hiện đại, sử dụng không gian đô thị theo chiều cao.'],
      next: 'Sang nhóm văn phòng và hành chính, bắt đầu với Sonadezi Building.' } },
 
  { id: 'sonadezi', title: 'Sonadezi Building', sec: 'off', tr: 'mask', thumb: 'sonadezi', build: () => split(B.sonadezi),
-   notes: { open: 'Sonadezi Building ở Đường số 1, Khu công nghiệp Biên Hòa 1.',
-     points: ['Được xây dựng để phục vụ hoạt động quản lý, điều hành và kinh doanh của doanh nghiệp.', 'Là địa điểm văn phòng và dịch vụ phục vụ hoạt động kinh tế trong khu vực.', 'Ý nghĩa: thể hiện quá trình công nghiệp hóa và hiện đại hóa của Đồng Nai.'],
+   notes: { open: 'Sonadezi Building ở Đường số 1, Khu công nghiệp Biên Hòa 1, phường An Bình, thành phố Đồng Nai.',
+     points: ['Được xây dựng để phục vụ hoạt động quản lý, điều hành và kinh doanh của doanh nghiệp.', 'Là địa điểm văn phòng và dịch vụ phục vụ hoạt động kinh tế trong khu vực.', 'Ý nghĩa: thể hiện quá trình công nghiệp hóa và hiện đại hóa của thành phố Đồng Nai.'],
      next: 'Một tòa nhà văn phòng khác là BV Building.' } },
  { id: 'bv', title: 'BV Building', sec: 'off', tr: 'slide', thumb: 'bv', build: () => split(B.bv, { flip: true }),
-   notes: { open: 'BV Building nằm ở số 197 đường Hà Huy Giáp.',
+   notes: { open: 'BV Building nằm ở số 197 đường Hà Huy Giáp, phường Trung Dũng, thành phố Đồng Nai (trước sáp nhập thuộc phường Quyết Thắng).',
      points: ['Được xây dựng để phục vụ nhu cầu văn phòng và hoạt động kinh doanh.', 'Là nơi làm việc của các doanh nghiệp và đơn vị dịch vụ.', 'Ý nghĩa: góp phần thể hiện diện mạo đô thị năng động và hiện đại của Biên Hòa.'],
-     next: 'Cuối cùng của nhóm này là trụ sở hành chính cao nhất của tỉnh.' } },
- { id: 'ubnd', title: 'Trụ sở UBND tỉnh — lịch sử', sec: 'off', tr: 'slide', thumb: 'ubnd', build: () => full(B.ubnd, { noMeaning: true }),
-   notes: { open: 'Trụ sở UBND tỉnh Đồng Nai ở số 02 đường Nguyễn Văn Trị, phường Thanh Bình.',
-     points: ['Tiền thân là Tòa hành chính tỉnh Biên Hòa thời Pháp.', 'Tháng 2/1976, UBND tỉnh chính thức thành lập sau khi hợp nhất các tỉnh Biên Hòa, Bà Rịa và Long Khánh.', 'Từ bộ máy quản lý thời chiến, cơ quan đã cải tổ qua nhiều thời kỳ Hiến pháp, nâng cấp trụ sở và số hóa.'],
+     next: 'Cuối cùng của nhóm này là trụ sở hành chính đầu não của thành phố.' } },
+ { id: 'ubnd', title: 'Trụ sở UBND TP. Đồng Nai — lịch sử', sec: 'off', tr: 'slide', thumb: 'ubnd', build: () => full(B.ubnd, { noMeaning: true }),
+   notes: { open: 'Trụ sở UBND thành phố Đồng Nai ở số 02 đường Nguyễn Văn Trị, phường Trung Dũng (trước sáp nhập thuộc phường Thanh Bình).',
+     points: ['Tiền thân là Tòa hành chính tỉnh Biên Hòa thời Pháp.', 'Tháng 2/1976, UBND tỉnh Đồng Nai thành lập sau khi hợp nhất Biên Hòa, Bà Rịa, Long Khánh; ngày 30/4/2026 thành lập Thành phố Đồng Nai trực thuộc Trung ương.', 'Từ bộ máy quản lý thời chiến, cơ quan đã cải tổ qua nhiều thời kỳ Hiến pháp, nâng cấp trụ sở và số hóa.'],
      next: 'Vậy cơ quan này đảm nhiệm vai trò gì? Mời cả lớp xem tiếp.' } },
- { id: 'ubnd2', title: 'Trụ sở UBND tỉnh — vai trò', sec: 'off', tr: 'slide', thumb: 'ubnd', build: () => {
+ { id: 'ubnd2', title: 'Trụ sở UBND TP. Đồng Nai — vai trò', sec: 'off', tr: 'slide', thumb: 'ubnd', build: () => {
      const b = B.ubnd;
      return { cls: 'l-roles-slide', html: `
      <div class="l-roles">
        <div class="roles-left">
          <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">${pad(b.n)}</span><span>${GROUPS.off.name}</span><i></i><span>Vai trò & ý nghĩa</span></div>
-           <h2 class="title sm" ${A('rise', 180)}>Trụ sở UBND tỉnh<br>Đồng Nai</h2></div>
+           <h2 class="title sm" ${A('rise', 180)}>Trụ sở UBND thành phố<br>Đồng Nai</h2></div>
          ${photo({ k: 'ubnd', fp: '50% 22%', cap: b.imgs[0].cap }, { cls: 'kb', a: A('mask', 260), tag: false })}
          <p class="quote" ${A('rise-sm', 700)}>“${b.meaning}”</p>
        </div>
@@ -470,16 +496,16 @@ const DEFS = [
        </div>
      </div>` };
    },
-   notes: { open: 'UBND tỉnh là cơ quan hành chính nhà nước cao nhất ở địa phương, thực hiện hai chức năng chính.',
-     points: ['Quản lý và điều hành: thực thi Hiến pháp, pháp luật, quản lý các lĩnh vực kinh tế, văn hóa, an ninh, quốc phòng trên địa bàn tỉnh.', 'Tổ chức thực hiện: cụ thể hóa nghị quyết của Tỉnh ủy, Hội đồng nhân dân tỉnh và chỉ đạo của Chính phủ thành kế hoạch, chính sách.', 'Ý nghĩa: trung tâm đưa ra các quyết sách phát triển kinh tế - xã hội cao nhất của tỉnh, mang tính phục vụ nhân dân.'],
+   notes: { open: 'UBND thành phố Đồng Nai là cơ quan hành chính nhà nước ở địa phương, thực hiện hai chức năng chính.',
+     points: ['Quản lý và điều hành: thực thi Hiến pháp, pháp luật, quản lý các lĩnh vực kinh tế, văn hóa, an ninh, quốc phòng trên địa bàn thành phố trực thuộc Trung ương.', 'Tổ chức thực hiện: cụ thể hóa nghị quyết của Thành ủy, Hội đồng nhân dân thành phố và chỉ đạo của Chính phủ thành kế hoạch, chính sách.', 'Ý nghĩa: trung tâm đưa ra các quyết sách phát triển kinh tế - xã hội cao nhất của thành phố Đồng Nai, mang tính phục vụ nhân dân.'],
      next: 'Từ những công trình hiện đại, chúng ta đi đến nhóm di sản văn hóa – lịch sử.' } },
 
  { id: 'tanlan', title: 'Đình Tân Lân', sec: 'her', tr: 'fade', thumb: 'tan-lan', build: () => heritage(B.tanlan),
-   notes: { open: 'Đình Tân Lân là công trình di sản đầu tiên.',
+   notes: { open: 'Đình Tân Lân nằm ở đường Nguyễn Văn Trị, phường Quang Vinh, thành phố Đồng Nai (trước sáp nhập thuộc phường Hòa Bình).',
      points: ['Có từ thời vua Minh Mạng, thờ Trần Thượng Xuyên, người có công khai phá vùng đất Đồng Nai.', 'Được xây dựng, tu sửa nhiều lần và được công nhận là di tích cấp quốc gia năm 1991.', 'Là nơi sinh hoạt tín ngưỡng và lưu giữ lịch sử địa phương; thể hiện lòng biết ơn người có công với quê hương.'],
      next: 'Một di tích khác gắn với cộng đồng người Hoa là Chùa Ông.' } },
  { id: 'chuaong', title: 'Chùa Ông (Thất Phủ Cổ Miếu)', sec: 'her', tr: 'slide', thumb: 'chua-ong', build: () => heritage(B.chuaong),
-   notes: { open: 'Chùa Ông, tên khác là Thất Phủ Cổ Miếu, được xây dựng năm 1684 bởi cộng đồng người Hoa ở Cù Lao Phố.',
+   notes: { open: 'Chùa Ông (Thất Phủ Cổ Miếu) nằm tại Cù Lao Phố, phường Hiệp Hòa, thành phố Đồng Nai, được xây dựng năm 1684 bởi cộng đồng người Hoa.',
      points: ['Được tu bổ qua nhiều thời kỳ, công nhận là di tích cấp quốc gia năm 2001.', 'Là nơi thờ tự, sinh hoạt văn hóa và thu hút khách tham quan.', 'Ý nghĩa: thể hiện sự giao thoa văn hóa Hoa – Việt.'],
      next: 'Bây giờ, hãy đặt tất cả các mốc thời gian lên một trục.' } },
 
@@ -491,11 +517,11 @@ const DEFS = [
      return { cls: 's-timeline', html: `
      <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">★</span><span>Tổng hợp</span><i></i><span>Các mốc trong tài liệu</span></div>
        <h2 class="title sm" ${A('rise', 160)}>Dòng thời gian của các công trình</h2></div>
-     <div class="tl-wrap"><div class="tl"><i class="tl-axis" ${A('line', 400)}></i>${evs}</div>
+     <div class="tl-wrap"><div class="tl" style="--tl-cols:${TIMELINE.length}"><i class="tl-axis" ${A('line', 400)}></i>${evs}</div>
        <div class="tl-legend" ${A('fade', 1800)}>${Object.values(GROUPS).map(G => `<span style="--gc:${G.color}"><i></i>${G.name}</span>`).join('')}<span>Bấm vào một mốc để đến công trình tương ứng.</span></div></div>` };
    },
    notes: { open: 'Đặt các mốc thời gian trong tài liệu lên một trục, ta thấy nhiều lớp lịch sử cùng tồn tại ở Biên Hòa.',
-     points: ['Chùa Ông được xây dựng năm 1684; Đình Tân Lân có từ thời vua Minh Mạng; Tòa hành chính tỉnh Biên Hòa từ thời Pháp.', 'UBND tỉnh thành lập tháng 2/1976; Đình Tân Lân (1991) và Chùa Ông (2001) được công nhận là di tích cấp quốc gia.', 'Các công trình hiện đại: Pegasus Plaza (khởi công 2011, khai trương 2013), Vincom (khai trương 2015), Thanh Bình Plaza (khởi công 10/2015, bàn giao cuối 2017), Aqua City (khởi công 2019).'],
+     points: ['Chùa Ông được xây dựng năm 1684; Đình Tân Lân có từ thời vua Minh Mạng; Tòa hành chính tỉnh Biên Hòa từ thời Pháp.', 'UBND tỉnh thành lập tháng 2/1976; Đình Tân Lân (1991) và Chùa Ông (2001) được công nhận là di tích cấp quốc gia.', 'Các công trình hiện đại: Pegasus Plaza (2011 - 2013), Vincom (2015), Thanh Bình Plaza (2015 - 2017), Aqua City (2019).', 'Ngày 30/4/2026: Thành lập Thành phố Đồng Nai trực thuộc Trung ương (NQ 30/2026/QH16), mở ra kỷ nguyên phát triển đô thị mới.'],
      next: 'Cuối cùng, ta so sánh bốn nhóm công trình.' } },
 
  { id: 'compare', title: 'So sánh các nhóm công trình', sec: 'sum', tr: 'slide', thumb: null, label: 'So sánh',
@@ -509,10 +535,10 @@ const DEFS = [
          f: 'Nhà ở, căn hộ cao tầng và tiện ích phục vụ cư dân.',
          a: 'Khối nhà cao tầng, ban công, mặt đứng hiện đại; Aqua City có 70% diện tích là mảng xanh, mặt nước; Thanh Bình có 11 tầng nổi, 1 tầng hầm.',
          r: 'Bổ sung nguồn cung nhà ở, thay đổi cảnh quan, nâng cao chất lượng sống.' },
-       { g: 'off', n: 'Sonadezi Building · BV Building · Trụ sở UBND tỉnh Đồng Nai',
-         f: 'Không gian làm việc; UBND tỉnh quản lý, điều hành và tổ chức thực hiện chính sách.',
-         a: 'Sonadezi, BV: khối văn phòng nhiều tầng, mặt đứng hiện đại, cửa kính. UBND tỉnh: tiền thân là Tòa hành chính thời Pháp.',
-         r: 'Hỗ trợ doanh nghiệp, kinh tế – thương mại; trung tâm quyết sách của tỉnh.' },
+       { g: 'off', n: 'Sonadezi Building · BV Building · Trụ sở UBND thành phố Đồng Nai',
+         f: 'Không gian làm việc; UBND thành phố quản lý, điều hành và tổ chức thực hiện chính sách.',
+         a: 'Sonadezi, BV: khối văn phòng nhiều tầng, mặt đứng hiện đại, cửa kính. UBND thành phố: tiền thân là Tòa hành chính thời Pháp, kiến trúc hành chính trang nghiêm.',
+         r: 'Hỗ trợ doanh nghiệp, kinh tế – thương mại; trung tâm quyết sách của thành phố Đồng Nai.' },
        { g: 'her', n: 'Đình Tân Lân · Chùa Ông (Thất Phủ Cổ Miếu)',
          f: 'Thờ tự, sinh hoạt tín ngưỡng và văn hóa.',
          a: 'Đình có từ thời vua Minh Mạng, di tích cấp quốc gia năm 1991; Chùa Ông xây năm 1684, di tích cấp quốc gia năm 2001.',
@@ -529,8 +555,8 @@ const DEFS = [
          <p>${r.f}</p><p>${r.a}</p><p>${r.r}</p></button>`).join('')}
      </div>` };
    },
-   notes: { open: 'Bốn nhóm công trình có chức năng khác nhau nhưng cùng góp phần làm nên diện mạo Biên Hòa.',
-     points: ['Thương mại – dịch vụ: mua sắm, giải trí, lưu trú; tạo việc làm.', 'Nhà ở – đô thị: căn hộ cao tầng, khu đô thị; Aqua City có 70% diện tích là mảng xanh, mặt nước.', 'Văn phòng – hành chính: không gian làm việc và cơ quan hành chính cao nhất của tỉnh.', 'Di sản: Đình Tân Lân và Chùa Ông lưu giữ lịch sử và văn hóa.'],
+   notes: { open: 'Bốn nhóm công trình có chức năng khác nhau nhưng cùng góp phần làm nên diện mạo đô thị Biên Hòa của thành phố Đồng Nai.',
+     points: ['Thương mại – dịch vụ: mua sắm, giải trí, lưu trú; tạo việc làm.', 'Nhà ở – đô thị: căn hộ cao tầng, khu đô thị; Aqua City có 70% diện tích là mảng xanh, mặt nước.', 'Văn phòng – hành chính: không gian làm việc và cơ quan hành chính cao nhất của thành phố.', 'Di sản: Đình Tân Lân và Chùa Ông lưu giữ lịch sử và văn hóa.'],
      next: 'Từ đó, nhóm xin rút ra kết luận cho bài thuyết trình.' } },
 
  { id: 'end', title: 'Kết luận', sec: 'sum', tr: 'zoom', thumb: null, label: 'Kết',
@@ -547,7 +573,7 @@ const DEFS = [
        <p class="end-quote" ${A('fade', 900)}>Tìm hiểu để trân trọng, trân trọng để gìn giữ.</p>
        <p class="thanks" ${A('rise', 1050)}>CẢM ƠN THẦY CÔ VÀ CÁC BẠN ĐÃ LẮNG NGHE!</p>
      </div>` }),
-   notes: { open: 'Qua 13 công trình, nhóm thấy được trọn vẹn sắc màu phố thị và dáng hình Biên Hòa hôm nay và mai sau.',
+   notes: { open: 'Qua 13 công trình, nhóm thấy được trọn vẹn sắc màu phố thị và dáng hình đô thị Biên Hòa trong lòng thành phố Đồng Nai hôm nay và mai sau.',
      points: ['Kiến trúc đa dạng: thương mại, nhà ở, văn phòng, hành chính và di sản.', 'Mỗi công trình đều có vai trò với đời sống địa phương: việc làm, mua sắm, nhà ở, quản lý hành chính, sinh hoạt tín ngưỡng.', 'Tìm hiểu và gìn giữ các di tích như Đình Tân Lân, Chùa Ông là cách thể hiện lòng biết ơn và trân trọng văn hóa, lịch sử.'],
      next: 'Xin cảm ơn thầy cô và các bạn đã lắng nghe! Nhóm sẵn sàng trả lời câu hỏi.' } }
 ];
@@ -694,6 +720,7 @@ function recover() {
 }
 
 function request(i) {
+  if (isVideoModalOpen()) closeVideoModal();
   i = clamp(i, 0, N - 1);
   want = i;
   updateUI();
@@ -772,7 +799,71 @@ $('#btnNext').addEventListener('click', e => { next(); e.currentTarget.blur(); }
 const tocOv = $('#tocOverlay'), helpOv = $('#helpOverlay');
 function openToc() { closeOverlays(); tocOv.hidden = false; const on = $('.toc-item.on'); on && on.scrollIntoView({ block: 'center' }); (on || $('.toc-item')).focus({ preventScroll: true }); }
 function openHelp() { closeOverlays(); helpOv.hidden = false; $('button', helpOv).focus(); }
-function closeOverlays() { const had = !tocOv.hidden || !helpOv.hidden; tocOv.hidden = true; helpOv.hidden = true; return had; }
+function openVideoModal(src, title, tag) {
+  const modal = $('#vidModal');
+  const player = $('#vidPlayer');
+  const titleEl = $('#vidTitle');
+  const tagEl = $('#vidTag');
+  if (!modal || !player) return;
+
+  if (titleEl) titleEl.textContent = title || 'Video tư liệu';
+  if (tagEl) tagEl.textContent = tag || 'Video tư liệu';
+
+  player.src = src;
+  modal.classList.remove('is-closing');
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+
+  player.play().catch(() => {});
+}
+
+function closeVideoModal() {
+  const modal = $('#vidModal');
+  const player = $('#vidPlayer');
+  if (!modal || !modal.classList.contains('is-open')) return;
+
+  modal.classList.add('is-closing');
+  if (player) player.pause();
+
+  setTimeout(() => {
+    modal.classList.remove('is-open', 'is-closing');
+    modal.setAttribute('aria-hidden', 'true');
+    if (player) {
+      player.pause();
+      player.src = '';
+    }
+  }, 320);
+}
+
+function isVideoModalOpen() {
+  const modal = $('#vidModal');
+  return modal && modal.classList.contains('is-open');
+}
+
+function closeOverlays() {
+  if (isVideoModalOpen()) { closeVideoModal(); return true; }
+  const had = !tocOv.hidden || !helpOv.hidden;
+  tocOv.hidden = true;
+  helpOv.hidden = true;
+  return had;
+}
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.vid-thumb');
+  if (btn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const src = btn.getAttribute('data-video-src');
+    const title = btn.getAttribute('data-video-title');
+    const tag = btn.getAttribute('data-video-tag');
+    if (src) openVideoModal(src, title, tag);
+  }
+});
+
+const btnVidClose = $('#btnVidClose');
+if (btnVidClose) btnVidClose.addEventListener('click', closeVideoModal);
+const vidBackdrop = $('#vidBackdrop');
+if (vidBackdrop) vidBackdrop.addEventListener('click', closeVideoModal);
 $('#btnToc').addEventListener('click', openToc);
 $('#btnHelp').addEventListener('click', openHelp);
 
@@ -841,6 +932,13 @@ REDUCE_MQ.addEventListener('change', e => setRM(e.matches));
 /* Bàn phím */
 function typing(t) { return t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)); }
 document.addEventListener('keydown', e => {
+  if (isVideoModalOpen()) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeVideoModal();
+    }
+    return;
+  }
   if (typing(e.target) || e.ctrlKey || e.metaKey || e.altKey) return;
   const k = e.key;
   switch (k) {

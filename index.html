@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>SẮC MÀU PHỐ THỊ — DÁNG HÌNH BIÊN HÒA HÔM NAY VÀ MAI SAU</title>
-  <meta name="description" content="Bài thuyết trình môn Giáo dục địa phương: Sắc màu phố thị - Dáng hình Biên Hòa hôm nay và mai sau. Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử trung tâm thành phố Biên Hòa, tỉnh Đồng Nai.">
+  <meta name="description" content="Bài thuyết trình môn Giáo dục địa phương: Sắc màu phố thị - Dáng hình Biên Hòa hôm nay và mai sau. Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại các phường trung tâm đô thị Biên Hòa, thành phố Đồng Nai.">
   <meta name="theme-color" content="#071B25">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23071B25'/%3E%3Cpath d='M6 28V15a10 10 0 0 1 20 0v13' fill='none' stroke='%232FC6AE' stroke-width='2.4'/%3E%3Cpath d='M12 28V17M16 28V11M20 28V17' stroke='%23D5AE68' stroke-width='2.4'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -116,9 +116,32 @@
         <div><dt><kbd>P</kbd></dt><dd>Cửa sổ người thuyết trình (màn hình phụ)</dd></div>
         <div><dt><kbd>M</kbd></dt><dd>Bật / tắt chế độ giảm chuyển động</dd></div>
         <div><dt><kbd>?</kbd></dt><dd>Mở bảng này</dd></div>
-        <div><dt><kbd>Esc</kbd></dt><dd>Đóng mục lục / hướng dẫn</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Đóng mục lục / hướng dẫn / video</dd></div>
       </dl>
       <p class="modal-note">Trên điện thoại: vuốt ngang để đổi slide. Các phím tắt không hoạt động khi bạn đang nhập vào ô nhập liệu.</p>
+    </div>
+  </div>
+
+  <!-- ============ 6. CỬA SỔ PHÁT VIDEO TƯ LIỆU (BÚNG RA / THU LẠI) ============ -->
+  <div class="vid-modal" id="vidModal" aria-hidden="true">
+    <div class="vid-modal-backdrop" id="vidBackdrop"></div>
+    <div class="vid-modal-dialog" id="vidDialog">
+      <header class="vid-modal-header">
+        <div class="vid-modal-title-group">
+          <span class="vid-modal-tag"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg> <span id="vidTag">Video tư liệu</span></span>
+          <h3 class="vid-modal-title" id="vidTitle">Tiêu đề video</h3>
+        </div>
+        <button class="vid-modal-close" id="btnVidClose" type="button" aria-label="Đóng video (Esc)" title="Đóng video (Esc)">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Đóng (Esc)</span>
+        </button>
+      </header>
+      <div class="vid-modal-body">
+        <video id="vidPlayer" controls playsinline preload="auto"></video>
+      </div>
+      <footer class="vid-modal-footer">
+        <span>💡 Nhấn <b>Esc</b> hoặc bấm ra ngoài để thu nhỏ lại và tiếp tục trình chiếu</span>
+      </footer>
     </div>
   </div>
 

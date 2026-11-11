@@ -1,6 +1,6 @@
 # SẮC MÀU PHỐ THỊ: DÁNG HÌNH BIÊN HÒA HÔM NAY VÀ MAI SAU
 > **Website trình chiếu tương tác phục vụ bài thuyết trình môn Giáo dục địa phương**  
-> **Chủ đề:** Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử trung tâm thành phố Biên Hòa, tỉnh Đồng Nai.  
+> **Chủ đề:** Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại các phường trung tâm đô thị Biên Hòa, thành phố Đồng Nai.  
 > **Thành viên thực hiện:** M.Na · B.Phương · K.Phụng · Yến · Đ.Thắng · H.Châu · Đ.Phong · Q.Nguyên.
 
 ---
@@ -9,25 +9,25 @@
 
 Website được xây dựng theo định hướng kết hợp giữa **triển lãm kiến trúc kỹ thuật số**, **tạp chí kiến trúc hiện đại** và **bài thuyết trình học đường chuyên nghiệp**. 
 
-Toàn bộ dữ liệu (tên công trình, địa chỉ, mốc thời gian khởi công/khai trương, chức năng, vai trò đối với kinh tế – xã hội địa phương, ý nghĩa văn hóa – lịch sử) được trích xuất **chính xác 100% từ tài liệu gốc DOCX** (`gddp.docx`), bao gồm đủ **13 công trình kiến trúc tiêu biểu** được chia thành 4 nhóm công năng chính:
+Toàn bộ dữ liệu (tên công trình, địa chỉ, mốc thời gian khởi công/khai trương, chức năng, vai trò đối với kinh tế – xã hội địa phương, ý nghĩa văn hóa – lịch sử) được trích xuất **chính xác 100% từ tài liệu gốc DOCX** (`gddp.docx`), đồng thời cập nhật đầy đủ ranh giới hành chính và địa chỉ mới nhất (theo Nghị quyết sắp xếp đơn vị hành chính cấp xã của UBTVQH và Nghị quyết 30/2026/QH16 thành lập Thành phố Đồng Nai trực thuộc Trung ương), bao gồm đủ **13 công trình kiến trúc tiêu biểu** được chia thành 4 nhóm công năng chính:
 
 1. **Nhóm Thương mại – Dịch vụ:**
-   - *The Pegasus Plaza* (53-55 Võ Thị Sáu, P. Quyết Thắng)
-   - *Vincom Plaza Biên Hòa* (1096 Phạm Văn Thuận, P. Tam Hiệp)
-   - *GO! Đồng Nai* (Xa lộ Hà Nội, Long Hưng)
-   - *The Mira Central Park* (128/16 Nguyễn Ái Quốc, Tam Hiệp)
+   - *The Pegasus Plaza* (Số 53 - 55 Võ Thị Sáu, P. Trung Dũng, TP. Đồng Nai)
+   - *Vincom Plaza Biên Hòa* (Số 1096 Phạm Văn Thuận, P. Tam Hiệp, TP. Đồng Nai)
+   - *GO! Đồng Nai* (Xa lộ Hà Nội, xã Long Hưng, TP. Đồng Nai)
+   - *The Mira Central Park* (Số 128/16 Nguyễn Ái Quốc, P. Tân Mai, TP. Đồng Nai)
 2. **Nhóm Nhà ở – Đô thị:**
-   - *Khu đô thị sinh thái Aqua City* (Đường Hương Lộ 2, xã Long Hưng)
-   - *Thanh Bình Plaza* (HUD Bộ Xây dựng, 11 tầng nổi + 1 tầng hầm)
-   - *Topaz Twins Biên Hòa* (Đường số 1 gần Võ Thị Sáu)
-   - *Bcons Central Park* (Hẻm 238 Phan Trung, Tam Hiệp)
+   - *Khu đô thị sinh thái Aqua City* (Đường Hương Lộ 2, xã Long Hưng, TP. Đồng Nai)
+   - *Thanh Bình Plaza* (Đường Cách Mạng Tháng Tám, P. Trung Dũng, TP. Đồng Nai)
+   - *Topaz Twins Biên Hòa* (Khu D2D đường số 1, P. Thống Nhất, TP. Đồng Nai)
+   - *Bcons Central Park* (Hẻm 238 Phan Trung, P. Tân Mai, TP. Đồng Nai)
 3. **Nhóm Văn phòng – Hành chính:**
-   - *Sonadezi Building* (Đường số 1, KCN Biên Hòa 1)
-   - *BV Building* (197 Hà Huy Giáp)
-   - *Trụ sở UBND tỉnh Đồng Nai* (Số 02 Nguyễn Văn Trị, P. Thanh Bình)
+   - *Sonadezi Building* (Đường số 1, KCN Biên Hòa 1, P. An Bình, TP. Đồng Nai)
+   - *BV Building* (Số 197 Hà Huy Giáp, P. Trung Dũng, TP. Đồng Nai)
+   - *Trụ sở UBND thành phố Đồng Nai* (Số 02 Nguyễn Văn Trị, P. Trung Dũng, TP. Đồng Nai)
 4. **Nhóm Di sản Văn hóa – Lịch sử:**
-   - *Đình Tân Lân* (Di tích cấp quốc gia năm 1991, thờ Trần Thượng Xuyên)
-   - *Chùa Ông – Thất Phủ Cổ Miếu* (Di tích cấp quốc gia năm 2001, xây dựng năm 1684 tại Cù Lao Phố)
+   - *Đình Tân Lân* (Đường Nguyễn Văn Trị, P. Quang Vinh, TP. Đồng Nai; di tích cấp quốc gia năm 1991, thờ Trần Thượng Xuyên)
+   - *Chùa Ông – Thất Phủ Cổ Miếu* (Cù Lao Phố, P. Hiệp Hòa, TP. Đồng Nai; di tích cấp quốc gia năm 2001, xây dựng năm 1684)
 
 Cùng với **Slide Dòng thời gian tương tác (1684 — 2026)**, **Slide Bảng so sánh 4 nhóm công trình** và **Slide Kết luận & Tri ân**. Tổng cộng: **20 slide**.
 
