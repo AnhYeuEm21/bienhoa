@@ -24,8 +24,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
 const GROUPS = {
   com : { name: 'Thương mại – dịch vụ',     color: '#2FC6AE', theme: 'm' },
   home: { name: 'Nhà ở – đô thị',           color: '#6DB8E8', theme: 'm' },
-  off : { name: 'Văn phòng – hành chính',   color: '#E49A5C', theme: 'm' },
-  her : { name: 'Di sản văn hóa – lịch sử', color: '#D5AE68', theme: 'h' }
+  off : { name: 'Văn phòng – hành chính',   color: '#E49A5C', theme: 'm' }
 };
 const SECTIONS = {
   open: { name: 'Mở đầu',               color: '#B8C5C8' },
@@ -185,40 +184,13 @@ const B = {
       { h: 'Tổ chức thực hiện', p: 'Cụ thể hóa các nghị quyết của Thành ủy, Hội đồng Nhân dân thành phố và chỉ đạo của Chính phủ thành các kế hoạch, chính sách phát triển thực tế.' }
     ]
   },
-  tanlan: {
-    n: 12, g: 'her', name: 'Đình Tân Lân', short: 'Đình Tân Lân', tag: 'Di tích cấp quốc gia (1991)',
-    addr: 'Đường Nguyễn Văn Trị, phường Quang Vinh, thành phố Đồng Nai (trước sáp nhập thuộc phường Hòa Bình).',
-    imgs: [{ k: 'tan-lan', fp: '50% 30%', cap: 'Cổng trước Đình Tân Lân (Hình 13.1)', tag: '' }],
-    dates: [{ d: 'Thời vua Minh Mạng', t: 'Đình có từ thời kỳ này, thờ Trần Thượng Xuyên', long: true },
-            { d: '1991', t: 'Được công nhận là di tích cấp quốc gia' }],
-    seal: ['Di tích cấp quốc gia', '1991'],
-    hist: 'Có từ thời vua Minh Mạng, thờ Trần Thượng Xuyên, người có công khai phá vùng đất Đồng Nai.',
-    dev: 'Đình được xây dựng, tu sửa nhiều lần và được công nhận là di tích cấp quốc gia năm 1991.',
-    roles: ['Là nơi sinh hoạt tín ngưỡng và lưu giữ lịch sử địa phương'],
-    meaning: 'Thể hiện lòng biết ơn người có công với quê hương.'
-  },
-  chuaong: {
-    n: 13, g: 'her', name: 'Chùa Ông (Thất Phủ Cổ Miếu)', short: 'Chùa Ông (Thất Phủ Cổ Miếu)', tag: 'Di tích cấp quốc gia (2001)',
-    addr: 'Cù Lao Phố, phường Hiệp Hòa, thành phố Đồng Nai.',
-    imgs: [{ k: 'chua-ong', fp: '50% 48%', cap: 'Cổng chùa Ông Thất Phủ Cổ Miếu (Hình 14.1)', tag: '' }],
-    dates: [{ d: '1684', t: 'Xây dựng bởi cộng đồng người Hoa ở Cù Lao Phố' },
-            { d: '2001', t: 'Được công nhận là di tích cấp quốc gia' }],
-    seal: ['Di tích cấp quốc gia', '2001'],
-    dev: 'Được tu bổ qua nhiều thời kỳ, công nhận là di tích cấp quốc gia năm 2001.',
-    roles: ['Là nơi thờ tự, sinh hoạt văn hóa và thu hút khách tham quan'],
-    meaning: 'Thể hiện sự giao thoa văn hóa Hoa – Việt.'
-  }
 };
 const TOTAL_BUILDINGS = Object.keys(B).length;
 
 /* Các mốc thời gian xuất hiện trong DOCX, sắp theo trình tự lịch sử (id → slide tương ứng) */
 const TIMELINE = [
-  { d: '1684',               t: 'Xây dựng Chùa Ông (Thất Phủ Cổ Miếu) tại Cù Lao Phố', id: 'chuaong', g: 'her' },
-  { d: 'Thời Minh Mạng',     t: 'Đình Tân Lân có từ thời vua Minh Mạng', id: 'tanlan', g: 'her', sm: 1 },
   { d: 'Thời Pháp',          t: 'Tòa hành chính tỉnh Biên Hòa, tiền thân trụ sở UBND thành phố Đồng Nai', id: 'ubnd', g: 'off', sm: 1 },
   { d: '2/1976',             t: 'UBND tỉnh Đồng Nai thành lập sau khi hợp nhất Biên Hòa, Bà Rịa, Long Khánh', id: 'ubnd', g: 'off' },
-  { d: '1991',               t: 'Đình Tân Lân là di tích cấp quốc gia', id: 'tanlan', g: 'her' },
-  { d: '2001',               t: 'Chùa Ông là di tích cấp quốc gia', id: 'chuaong', g: 'her' },
   { d: '1/1/2011',           t: 'Khởi công The Pegasus Plaza', id: 'pegasus', g: 'com' },
   { d: '11/12/2013',         t: 'Khai trương The Pegasus Plaza', id: 'pegasus', g: 'com' },
   { d: '28/8/2015',          t: 'Khai trương Vincom Plaza Biên Hòa', id: 'vincom', g: 'com' },
@@ -363,11 +335,11 @@ const DEFS = [
  { id: 'cover', title: 'Trang bìa', sec: 'open', tr: 'fade', thumb: null, label: 'Bìa',
    build: () => {
      const sl = [
-       { k: 'chua-ong', fp: '50% 50%', cap: 'Chùa Ông', h: 58, d: 560 },
-       { k: 'mira',     fp: '34% 40%', cap: 'The Mira', h: 80, d: 460 },
-       { k: 'pegasus',  fp: '41% 50%', cap: 'Pegasus',  h: 100, d: 360 },
-       { k: 'ubnd',     fp: '50% 30%', cap: 'UBND TP',   h: 72, d: 460 },
-       { k: 'tan-lan',  fp: '50% 55%', cap: 'Tân Lân',  h: 64, d: 560 }
+       { k: 'aqua-real',  fp: '45% 50%', cap: 'Aqua City', h: 62, d: 560 },
+       { k: 'mira',       fp: '34% 40%', cap: 'The Mira',  h: 80, d: 460 },
+       { k: 'pegasus',    fp: '41% 50%', cap: 'Pegasus',   h: 100, d: 360 },
+       { k: 'ubnd',       fp: '50% 30%', cap: 'UBND TP',    h: 80, d: 460 },
+       { k: 'vincom-out', fp: '50% 55%', cap: 'Vincom',    h: 62, d: 560 }
      ];
      return { cls: 's-cover', html: `
      <div class="bp" ${A('fade', 0)}></div>
@@ -376,7 +348,7 @@ const DEFS = [
      <div class="cover-text">
        <div class="eyebrow" ${A('fade', 200)}><span>Giáo dục địa phương</span><i></i><span>Chuyên đề kiến trúc</span></div>
        <h1><span class="l1" ${A('rise', 300)}>SẮC MÀU PHỐ THỊ</span><span class="l2" ${A('rise', 460)}>— DÁNG HÌNH BIÊN HÒA HÔM NAY VÀ MAI SAU</span></h1>
-       <p class="sub" ${A('rise-sm', 640)}>Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử trung tâm.</p>
+       <p class="sub" ${A('rise-sm', 640)}>Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và văn phòng hành chính trung tâm.</p>
        <div class="cover-meta" ${A('rise-sm', 780)}>
          <div><small>Môn học</small><span>Giáo dục địa phương</span></div>
          <div><small>Chủ đề</small><span>Kiến trúc các phường ở trung tâm<br>đô thị Biên Hòa, TP. Đồng Nai</span></div>
@@ -386,7 +358,7 @@ const DEFS = [
      </div>
      <div class="cover-loc" ${A('fade', 1100)}>ĐÔ THỊ BIÊN HÒA · THÀNH PHỐ ĐỒNG NAI</div>` };
    },
-   notes: { open: 'Xin chào thầy cô và các bạn. Hôm nay nhóm xin giới thiệu chuyên đề “Sắc màu phố thị: Dáng hình Biên Hòa hôm nay và mai sau”, tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại các phường trung tâm đô thị Biên Hòa thuộc thành phố Đồng Nai.',
+   notes: { open: 'Xin chào thầy cô và các bạn. Hôm nay nhóm xin giới thiệu chuyên đề “Sắc màu phố thị: Dáng hình Biên Hòa hôm nay và mai sau”, tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và văn phòng hành chính tại các phường trung tâm đô thị Biên Hòa thuộc thành phố Đồng Nai.',
      points: ['Môn học: Giáo dục địa phương.', 'Thành viên thực hiện: M.Na, B.Phương, K.Phụng, Yến, Đ.Thắng, H.Châu, Đ.Phong, Q.Nguyên.', 'Mỗi công trình là một câu chuyện về diện mạo đô thị và giá trị văn hóa địa phương.'],
      next: 'Trước tiên, mời cả lớp nhìn qua tổng quan hành trình hôm nay.' } },
 
@@ -397,8 +369,7 @@ const DEFS = [
        const desc = {
          com : 'Thúc đẩy thương mại, dịch vụ; tạo việc làm; không gian mua sắm, giải trí, lưu trú.',
          home: 'Căn hộ cao tầng và khu đô thị đáp ứng nhu cầu nhà ở, thay đổi cảnh quan đô thị.',
-         off : 'Không gian làm việc của doanh nghiệp và cơ quan hành chính cấp thành phố trực thuộc Trung ương.',
-         her : 'Đình, chùa là di tích cấp quốc gia, lưu giữ lịch sử và văn hóa địa phương.'
+         off : 'Không gian làm việc của doanh nghiệp và cơ quan hành chính cấp thành phố trực thuộc Trung ương.'
        }[g];
        return `<section class="ov-col" style="--gc:${G.color}" ${A('rise', 260 + ci * 130)}>
          <header><b>Nhóm ${ci + 1} · ${items.length} công trình</b><h3>${G.name}</h3><p>${desc}</p></header>
@@ -407,14 +378,14 @@ const DEFS = [
      }).join('');
      return { cls: 's-overview', html: `
        <div class="ov-top">
-         <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">02</span><span>Tổng quan</span><i></i><span>${TOTAL_BUILDINGS} công trình · 4 nhóm</span></div>
+         <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">02</span><span>Tổng quan</span><i></i><span>${TOTAL_BUILDINGS} công trình · 3 nhóm</span></div>
            <h2 class="title" ${A('rise', 160)}>Hành trình qua ${TOTAL_BUILDINGS} công trình<br>của trung tâm Biên Hòa</h2></div>
-         <p class="lead" ${A('rise-sm', 300)}>Từ trung tâm thương mại, khu căn hộ, tòa nhà văn phòng đến đình, chùa là di tích cấp quốc gia. Bấm vào một công trình để đi thẳng tới slide của nó.</p>
+         <p class="lead" ${A('rise-sm', 300)}>Từ trung tâm thương mại, khu căn hộ hiện đại đến các tòa nhà văn phòng và cơ quan hành chính đầu não. Bấm vào một công trình để đi thẳng tới slide của nó.</p>
        </div>
-       <div class="ov-grid">${cols}</div>` };
+       <div class="ov-grid" style="--ov-cols:${Object.keys(GROUPS).length}">${cols}</div>` };
    },
-   notes: { open: 'Bài thuyết trình đi qua 13 công trình trong tài liệu, chia thành bốn nhóm theo chức năng.',
-     points: ['Nhóm 1 — Thương mại, dịch vụ: The Pegasus Plaza, Vincom Plaza Biên Hòa, GO! Đồng Nai, The Mira Central Park.', 'Nhóm 2 — Nhà ở, đô thị: Aqua City, Thanh Bình Plaza, Topaz Twins Biên Hòa, Bcons Central Park.', 'Nhóm 3 — Văn phòng, hành chính: Sonadezi Building, BV Building, trụ sở UBND thành phố Đồng Nai.', 'Nhóm 4 — Di sản: Đình Tân Lân và Chùa Ông (Thất Phủ Cổ Miếu).'],
+   notes: { open: 'Bài thuyết trình đi qua 11 công trình tiêu biểu, chia thành ba nhóm theo chức năng.',
+     points: ['Nhóm 1 — Thương mại, dịch vụ: The Pegasus Plaza, Vincom Plaza Biên Hòa, GO! Đồng Nai, The Mira Central Park.', 'Nhóm 2 — Nhà ở, đô thị: Aqua City, Thanh Bình Plaza, Topaz Twins Biên Hòa, Bcons Central Park.', 'Nhóm 3 — Văn phòng, hành chính: Sonadezi Building, BV Building, trụ sở UBND thành phố Đồng Nai.'],
      next: 'Chúng ta bắt đầu với nhóm thương mại – dịch vụ, mở đầu là The Pegasus Plaza.' } },
 
  { id: 'pegasus', title: 'The Pegasus Plaza', sec: 'com', tr: 'mask', thumb: 'pegasus', build: () => split(B.pegasus),
@@ -502,16 +473,7 @@ const DEFS = [
    },
    notes: { open: 'UBND thành phố Đồng Nai là cơ quan hành chính nhà nước ở địa phương, thực hiện hai chức năng chính.',
      points: ['Quản lý và điều hành: thực thi Hiến pháp, pháp luật, quản lý các lĩnh vực kinh tế, văn hóa, an ninh, quốc phòng trên địa bàn thành phố trực thuộc Trung ương.', 'Tổ chức thực hiện: cụ thể hóa nghị quyết của Thành ủy, Hội đồng nhân dân thành phố và chỉ đạo của Chính phủ thành kế hoạch, chính sách.', 'Ý nghĩa: trung tâm đưa ra các quyết sách phát triển kinh tế - xã hội cao nhất của thành phố Đồng Nai, mang tính phục vụ nhân dân.'],
-     next: 'Từ những công trình hiện đại, chúng ta đi đến nhóm di sản văn hóa – lịch sử.' } },
-
- { id: 'tanlan', title: 'Đình Tân Lân', sec: 'her', tr: 'fade', thumb: 'tan-lan', build: () => heritage(B.tanlan),
-   notes: { open: 'Đình Tân Lân nằm ở đường Nguyễn Văn Trị, phường Quang Vinh, thành phố Đồng Nai (trước sáp nhập thuộc phường Hòa Bình).',
-     points: ['Có từ thời vua Minh Mạng, thờ Trần Thượng Xuyên, người có công khai phá vùng đất Đồng Nai.', 'Được xây dựng, tu sửa nhiều lần và được công nhận là di tích cấp quốc gia năm 1991.', 'Là nơi sinh hoạt tín ngưỡng và lưu giữ lịch sử địa phương; thể hiện lòng biết ơn người có công với quê hương.'],
-     next: 'Một di tích khác gắn với cộng đồng người Hoa là Chùa Ông.' } },
- { id: 'chuaong', title: 'Chùa Ông (Thất Phủ Cổ Miếu)', sec: 'her', tr: 'slide', thumb: 'chua-ong', build: () => heritage(B.chuaong),
-   notes: { open: 'Chùa Ông (Thất Phủ Cổ Miếu) nằm tại Cù Lao Phố, phường Hiệp Hòa, thành phố Đồng Nai, được xây dựng năm 1684 bởi cộng đồng người Hoa.',
-     points: ['Được tu bổ qua nhiều thời kỳ, công nhận là di tích cấp quốc gia năm 2001.', 'Là nơi thờ tự, sinh hoạt văn hóa và thu hút khách tham quan.', 'Ý nghĩa: thể hiện sự giao thoa văn hóa Hoa – Việt.'],
-     next: 'Bây giờ, hãy đặt tất cả các mốc thời gian lên một trục.' } },
+     next: 'Bây giờ, hãy đặt tất cả các mốc thời gian của các công trình lên một trục lịch sử.' } },
 
  { id: 'timeline', title: 'Dòng thời gian các công trình', sec: 'sum', tr: 'zoom', thumb: null, label: 'Mốc',
    build: () => {
@@ -542,16 +504,12 @@ const DEFS = [
        { g: 'off', n: 'Sonadezi Building · BV Building · Trụ sở UBND thành phố Đồng Nai',
          f: 'Không gian làm việc; UBND thành phố quản lý, điều hành và tổ chức thực hiện chính sách.',
          a: 'Sonadezi, BV: khối văn phòng nhiều tầng, mặt đứng hiện đại, cửa kính. UBND thành phố: tiền thân là Tòa hành chính thời Pháp, kiến trúc hành chính trang nghiêm.',
-         r: 'Hỗ trợ doanh nghiệp, kinh tế – thương mại; trung tâm quyết sách của thành phố Đồng Nai.' },
-       { g: 'her', n: 'Đình Tân Lân · Chùa Ông (Thất Phủ Cổ Miếu)',
-         f: 'Thờ tự, sinh hoạt tín ngưỡng và văn hóa.',
-         a: 'Đình có từ thời vua Minh Mạng, di tích cấp quốc gia năm 1991; Chùa Ông xây năm 1684, di tích cấp quốc gia năm 2001.',
-         r: 'Lưu giữ lịch sử địa phương; thể hiện lòng biết ơn và sự giao thoa văn hóa Hoa – Việt.' }
+         r: 'Hỗ trợ doanh nghiệp, kinh tế – thương mại; trung tâm quyết sách của thành phố Đồng Nai.' }
      ];
-     const first = { com: 'pegasus', home: 'aqua', off: 'sonadezi', her: 'tanlan' };
+     const first = { com: 'pegasus', home: 'aqua', off: 'sonadezi' };
      return { cls: 's-compare', html: `
-     <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">★</span><span>Tổng hợp</span><i></i><span>So sánh 4 nhóm</span></div>
-       <h2 class="title sm" ${A('rise', 160)}>Bốn nhóm công trình — bốn vai trò</h2></div>
+     <div class="head"><div class="eyebrow" ${A('fade', 100)}><span class="idx">★</span><span>Tổng hợp</span><i></i><span>So sánh 3 nhóm</span></div>
+       <h2 class="title sm" ${A('rise', 160)}>Ba nhóm công trình — ba vai trò</h2></div>
      <div class="cmp">
        <div class="cmp-head" ${A('fade', 300)}><span>Nhóm</span><span>Chức năng</span><span>Đặc điểm nổi bật (theo tài liệu)</span><span>Vai trò – ý nghĩa</span></div>
        ${rows.map((r, i) => `<button class="cmp-row" type="button" style="--gc:${GROUPS[r.g].color}" data-go="${IDX[first[r.g]]}" ${A('rise-sm', 400 + i * 170)}>
@@ -570,11 +528,11 @@ const DEFS = [
        <div class="eyebrow" ${A('fade', 100)}><span>Kết luận</span></div>
        <h2 class="title" ${A('rise', 180)}>SẮC MÀU PHỐ THỊ — DÁNG HÌNH BIÊN HÒA<br>HÔM NAY VÀ MAI SAU</h2>
        <div class="pillars">
-         <div class="pillar" style="--bc:#2FC6AE" ${A('rise-sm', 400)}><b>Kiến trúc đa dạng</b><p>${TOTAL_BUILDINGS} công trình, 4 nhóm: thương mại – dịch vụ, nhà ở – đô thị, văn phòng – hành chính và di sản.</p></div>
-         <div class="pillar" style="--bc:#6DB8E8" ${A('rise-sm', 540)}><b>Gắn với đời sống</b><p>Tạo việc làm, không gian mua sắm – giải trí, nhà ở chất lượng cao, quản lý hành chính và sinh hoạt tín ngưỡng.</p></div>
-         <div class="pillar" style="--bc:#D5AE68" ${A('rise-sm', 680)}><b>Giữ gìn giá trị</b><p>Đình Tân Lân (1991) và Chùa Ông (2001) là di tích cấp quốc gia: lưu giữ lịch sử, thể hiện lòng biết ơn và sự giao thoa văn hóa Hoa – Việt.</p></div>
+         <div class="pillar" style="--bc:#2FC6AE" ${A('rise-sm', 400)}><b>Kiến trúc đa dạng</b><p>${TOTAL_BUILDINGS} công trình, 3 nhóm: thương mại – dịch vụ, nhà ở – đô thị và văn phòng – hành chính.</p></div>
+         <div class="pillar" style="--bc:#6DB8E8" ${A('rise-sm', 540)}><b>Gắn với đời sống</b><p>Tạo việc làm, không gian mua sắm – giải trí, nhà ở chất lượng cao và quản lý, điều hành phát triển kinh tế – xã hội.</p></div>
+         <div class="pillar" style="--bc:#D5AE68" ${A('rise-sm', 680)}><b>Đô thị tương lai</b><p>Hiện đại hóa không gian sống, đồng hành cùng sự phát triển vươn tầm của Thành phố Đồng Nai trực thuộc Trung ương.</p></div>
        </div>
-       <p class="end-quote" ${A('fade', 900)}>Tìm hiểu để trân trọng, trân trọng để gìn giữ.</p>
+       <p class="end-quote" ${A('fade', 900)}>Kiến tạo không gian sống hiện đại, bền vững và phồn vinh.</p>
        <p class="thanks" ${A('rise', 1050)}>CẢM ƠN THẦY CÔ VÀ CÁC BẠN ĐÃ LẮNG NGHE!</p>
      </div>` }),
    notes: { open: 'Qua 13 công trình, nhóm thấy được trọn vẹn sắc màu phố thị và dáng hình đô thị Biên Hòa trong lòng thành phố Đồng Nai hôm nay và mai sau.',

@@ -274,7 +274,7 @@ body.fs .stage-wrap{grid-row:1}
 .ov-top{display:flex;justify-content:space-between;align-items:flex-end;gap:6rem;margin-bottom:3rem}
 .ov-top .title{max-width:90rem}
 .ov-top .lead{max-width:66rem;font-size:2rem}
-.ov-grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.2rem}
+.ov-grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(var(--ov-cols,3),minmax(0,1fr));gap:2.6rem}
 .ov-col{display:flex;flex-direction:column;min-height:0;background:var(--card);border:1px solid var(--line);border-top:.6rem solid var(--gc);padding:2.4rem 2.2rem;gap:1.6rem}
 .ov-col header{display:flex;flex-direction:column;gap:.6rem}
 .ov-col header b{font-size:1.3rem;font-weight:700;letter-spacing:.18em;color:var(--gc);text-transform:uppercase}
@@ -304,7 +304,7 @@ body.fs .stage-wrap{grid-row:1}
 
 /* ================================================ Slide: DÒNG THỜI GIAN */
 .tl-wrap{flex:1;min-height:0;position:relative;display:flex;flex-direction:column}
-.tl{position:relative;flex:1;min-height:0;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-columns:repeat(var(--tl-cols, 14),minmax(0,1fr));padding:0 4.2rem}
+.tl{position:relative;flex:1;min-height:0;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-columns:repeat(var(--tl-cols, 10),minmax(0,1fr));padding:0 4.2rem}
 .tl-axis{position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;background:linear-gradient(90deg,var(--brass),var(--teal) 60%,var(--teal));transform-origin:left}
 .ev{position:relative;display:block;text-align:left;min-height:0}
 .ev .dot{position:absolute;left:50%;top:50%;width:1.8rem;height:1.8rem;margin:-.9rem 0 0 -.9rem;border-radius:50%;background:var(--ink);border:.4rem solid var(--gc);z-index:2;transition:transform var(--t-hover) var(--ease-out),background var(--t-hover)}

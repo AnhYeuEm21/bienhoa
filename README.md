@@ -1,6 +1,6 @@
 # SẮC MÀU PHỐ THỊ: DÁNG HÌNH BIÊN HÒA HÔM NAY VÀ MAI SAU
 > **Website trình chiếu tương tác phục vụ bài thuyết trình môn Giáo dục địa phương**  
-> **Chủ đề:** Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và di tích lịch sử tại các phường trung tâm đô thị Biên Hòa, thành phố Đồng Nai.  
+> **Chủ đề:** Tổng hòa kiến trúc thương mại, dịch vụ, nhà ở và văn phòng hành chính tại các phường trung tâm đô thị Biên Hòa, thành phố Đồng Nai.  
 > **Thành viên thực hiện:** M.Na · B.Phương · K.Phụng · Yến · Đ.Thắng · H.Châu · Đ.Phong · Q.Nguyên.
 
 ---
@@ -9,7 +9,7 @@
 
 Website được xây dựng theo định hướng kết hợp giữa **triển lãm kiến trúc kỹ thuật số**, **tạp chí kiến trúc hiện đại** và **bài thuyết trình học đường chuyên nghiệp**. 
 
-Toàn bộ dữ liệu (tên công trình, địa chỉ, mốc thời gian khởi công/khai trương, chức năng, vai trò đối với kinh tế – xã hội địa phương, ý nghĩa văn hóa – lịch sử) được trích xuất **chính xác 100% từ tài liệu gốc DOCX** (`gddp.docx`), đồng thời cập nhật đầy đủ ranh giới hành chính và địa chỉ mới nhất (theo Nghị quyết sắp xếp đơn vị hành chính cấp xã của UBTVQH và Nghị quyết 30/2026/QH16 thành lập Thành phố Đồng Nai trực thuộc Trung ương), bao gồm đủ **13 công trình kiến trúc tiêu biểu** được chia thành 4 nhóm công năng chính:
+Toàn bộ dữ liệu (tên công trình, địa chỉ, mốc thời gian khởi công/khai trương, chức năng, vai trò đối với kinh tế – xã hội địa phương, ý nghĩa văn hóa – lịch sử) được trích xuất **chính xác 100% từ tài liệu gốc DOCX** (`gddp.docx`), đồng thời cập nhật đầy đủ ranh giới hành chính và địa chỉ mới nhất (theo Nghị quyết sắp xếp đơn vị hành chính cấp xã của UBTVQH và Nghị quyết 30/2026/QH16 thành lập Thành phố Đồng Nai trực thuộc Trung ương), bao gồm đủ **11 công trình kiến trúc tiêu biểu** được chia thành 3 nhóm công năng chính:
 
 1. **Nhóm Thương mại – Dịch vụ:**
    - *The Pegasus Plaza* (Số 53 - 55 Võ Thị Sáu, P. Trung Dũng, TP. Đồng Nai)
@@ -29,7 +29,7 @@ Toàn bộ dữ liệu (tên công trình, địa chỉ, mốc thời gian khở
    - *Đình Tân Lân* (Đường Nguyễn Văn Trị, P. Quang Vinh, TP. Đồng Nai; di tích cấp quốc gia năm 1991, thờ Trần Thượng Xuyên)
    - *Chùa Ông – Thất Phủ Cổ Miếu* (Cù Lao Phố, P. Hiệp Hòa, TP. Đồng Nai; di tích cấp quốc gia năm 2001, xây dựng năm 1684)
 
-Cùng với **Slide Dòng thời gian tương tác (1684 — 2026)**, **Slide Bảng so sánh 4 nhóm công trình** và **Slide Kết luận & Tri ân**. Tổng cộng: **20 slide**.
+Cùng với **Slide Dòng thời gian tương tác (Thời Pháp — Cuối năm 2026)**, **Slide Bảng so sánh 3 nhóm công trình** và **Slide Kết luận & Tri ân**. Tổng cộng: **18 slide**.
 
 ---
 
@@ -39,7 +39,7 @@ Cùng với **Slide Dòng thời gian tương tác (1684 — 2026)**, **Slide B�
 GDĐP ok/
 ├── index.html         # Cấu trúc HTML5 semantic, thanh điều hướng, stage và điều khiển
 ├── style.css          # Hệ thống thiết kế, bảng màu, typography, CSS animation & responsive
-├── script.js          # Dữ liệu 13 công trình, bộ máy chuyển cảnh Web Animations API & điều khiển
+├── script.js          # Dữ liệu 11 công trình, bộ máy chuyển cảnh Web Animations API & điều khiển
 ├── assets/
 │   ├── fonts/         # Toàn bộ font offline (Be Vietnam Pro, Playfair Display)
 │   │   ├── BeVietnamPro-400.ttf
