@@ -63,7 +63,9 @@ const B = {
     addr: 'Khu vực Xa lộ Hà Nội, xã Long Hưng, thành phố Đồng Nai.',
     video: {
       src: 'assets/video/202611120623.mp4',
+      rootSrc: '202611120623.mp4',
       poster: 'assets/video/thumb_go.jpg',
+      fallbackPoster: 'assets/img/go.jpg',
       title: 'Trung tâm thương mại GO! Đồng Nai',
       tag: 'Video thực tế'
     },
@@ -91,7 +93,9 @@ const B = {
     addr: 'Đường Hương Lộ 2, xã Long Hưng, thành phố Đồng Nai (liền kề TP.HCM).',
     video: {
       src: 'assets/video/202611120629.mp4',
+      rootSrc: '202611120629.mp4',
       poster: 'assets/video/thumb_aqua.jpg',
+      fallbackPoster: 'assets/img/aqua-real.jpg',
       title: 'Đô thị sinh thái Aqua City Novaland',
       tag: 'Video toàn cảnh'
     },
@@ -245,8 +249,8 @@ function photo(img, o = {}) {
 const eyebrow = (b, a) => `<div class="eyebrow" ${a}><span class="idx">${pad(b.n)}</span><span>${GROUPS[b.g].name}</span><i></i><span>${b.n}/${TOTAL_BUILDINGS}</span></div>`;
 const titleH = (b, a, cls = '') => `<h2 class="title ${cls}" ${a}>${b.name}</h2>`;
 const addrH = (b, a) => b.addr ? `<p class="addr" ${a}>${PIN}<span>${b.addr}</span></p>` : '';
-const videoThumbH = (v, delay = 260) => v ? `<button class="vid-thumb" type="button" aria-label="Xem ${v.title}" data-video-src="${v.src}" data-video-title="${v.title}" data-video-tag="${v.tag || 'Video tư liệu'}" ${A('pop', delay)}>
-  <img src="${v.poster}" alt="${v.title}" loading="lazy">
+const videoThumbH = (v, delay = 260) => v ? `<button class="vid-thumb" type="button" aria-label="Xem ${v.title}" data-video-src="${v.src}" data-video-root-src="${v.rootSrc || ''}" data-video-title="${v.title}" data-video-tag="${v.tag || 'Video tư liệu'}" ${A('pop', delay)}>
+  <img src="${v.poster}" alt="${v.title}" loading="lazy" onerror="if(this.dataset.t!=='1'){this.dataset.t='1';this.src='${v.fallbackPoster || v.poster}';}">
   <div class="vid-thumb-overlay">
     <span class="vid-badge"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg> ${v.tag || 'Video'}</span>
     <span class="vid-play-btn"><svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg></span>
@@ -799,7 +803,7 @@ $('#btnNext').addEventListener('click', e => { next(); e.currentTarget.blur(); }
 const tocOv = $('#tocOverlay'), helpOv = $('#helpOverlay');
 function openToc() { closeOverlays(); tocOv.hidden = false; const on = $('.toc-item.on'); on && on.scrollIntoView({ block: 'center' }); (on || $('.toc-item')).focus({ preventScroll: true }); }
 function openHelp() { closeOverlays(); helpOv.hidden = false; $('button', helpOv).focus(); }
-function openVideoModal(src, title, tag) {
+function openVideoModal(src, title, tag, rootSrc) {
   const modal = $('#vidModal');
   const player = $('#vidPlayer');
   const titleEl = $('#vidTitle');
@@ -809,11 +813,32 @@ function openVideoModal(src, title, tag) {
   if (titleEl) titleEl.textContent = title || 'Video tư liệu';
   if (tagEl) tagEl.textContent = tag || 'Video tư liệu';
 
-  player.src = src;
+  const fileName = src ? src.split('/').pop() : '';
+  const candidates = [
+    src,
+    rootSrc || fileName,
+    '/' + (rootSrc || fileName),
+    'assets/video/' + fileName
+  ].filter((v, i, a) => v && a.indexOf(v) === i);
+
+  player.innerHTML = candidates.map(c => `<source src="${c}" type="video/mp4">`).join('');
+  player.removeAttribute('src');
+
+  let tryIdx = 0;
+  player.onerror = () => {
+    tryIdx++;
+    if (tryIdx < candidates.length) {
+      player.src = candidates[tryIdx];
+      player.load();
+      player.play().catch(() => {});
+    }
+  };
+
   modal.classList.remove('is-closing');
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
 
+  player.load();
   player.play().catch(() => {});
 }
 
@@ -854,9 +879,10 @@ document.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
     const src = btn.getAttribute('data-video-src');
+    const rootSrc = btn.getAttribute('data-video-root-src');
     const title = btn.getAttribute('data-video-title');
     const tag = btn.getAttribute('data-video-tag');
-    if (src) openVideoModal(src, title, tag);
+    if (src) openVideoModal(src, title, tag, rootSrc);
   }
 });
 
